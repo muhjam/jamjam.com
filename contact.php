@@ -87,8 +87,8 @@
 
 
 			<div class="form mb-3">
-				<textarea class="form-control" name="message" placeholder="Message" id="floatingTextarea2" style="height: 100px"
-					autofocus required></textarea>
+				<textarea class="form-control" name="message" placeholder="Message to muhhjam@gmail.com" id="floatingTextarea2"
+					style="height: 100px" autofocus required></textarea>
 			</div>
 
 			<button type="submit" class="btn btn-outline-dark me-2 btn-kirim">
