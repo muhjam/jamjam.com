@@ -20,7 +20,7 @@ $message=$_POST['message'];
     $mail->Password = "jcgymmzzfujjvafo";
     $mail->SetFrom($email);
     $mail->Subject = "From: $username";
-    $mail->Body = "You have received a new message from your website contact form.<br> <strong>name</strong>: $username <br> <strong>email</strong>: $email <br> <strong>Message</strong>: $message";
+    $mail->Body = "You have received a new message from your website contact form.<br><br> <strong>name</strong>: $username <br> <strong>email</strong>: $email <br><br> <strong>Message</strong>: $message";
 		
     $mail->AddAddress("muhhjam@gmail.com");
 
