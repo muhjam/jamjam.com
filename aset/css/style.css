@@ -225,7 +225,7 @@ section {
 
 #skill .container {
     width: 80%;
-    height: 100%;
+    height: 110px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.2);
     margin: -100px auto 0 auto;
     z-index: 1;
@@ -246,7 +246,6 @@ section {
     color: #2d2d2d;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 #skill .container .row .col h4 {
@@ -303,9 +302,26 @@ section {
 /* mobile */
 
 @media (max-width: 425px) {
+    #skill .container .row {
+        color: #2d2d2d;
+        display: flex;
+        justify-content: space-around;
+        overflow: scroll;
+        padding-left: 50px;
+    }
     #work .container .card {
         width: 90%;
         margin: 0 auto 30px auto;
+    }
+}
+
+@media (max-width: 320px) {
+    #skill .container .row {
+        color: #2d2d2d;
+        display: flex;
+        justify-content: space-around;
+        overflow: scroll;
+        padding-left: 100px;
     }
 }
 
