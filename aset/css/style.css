@@ -69,15 +69,6 @@ nav .navbar-pages ul li a {
     line-height: 30px;
 }
 
-nav .navbar-pages ul li a:hover::after {
-    content: " ";
-    display: block;
-    border-bottom: 3px solid #0b63dc;
-    width: 50%;
-    margin: auto;
-    height: 0px;
-}
-
 nav .navbar-pages ul li .active::after {
     content: " ";
     display: block;
@@ -284,6 +275,14 @@ section {
 /* desktop */
 
 @media (min-width: 992px) {
+    nav .navbar-pages ul li a:hover::after {
+        content: " " !important;
+        display: block !important;
+        border-bottom: 3px solid #0b63dc !important;
+        width: 50% !important;
+        margin: auto !important;
+        height: 0px !important;
+    }
     #work .container .card {
         width: 30%;
         margin-bottom: 20px;
