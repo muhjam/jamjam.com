@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Titillium Web", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: #ffff !important;
+    font-family: "poppins", sans-serif !important;
+    font-size: 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+
+/* awal nav .navbar-pagesbar */
+
+nav {
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    transition: all 0.5s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.2);
+    height: 60px;
+    color: #ffff;
+}
+
+nav .navbar-pages {
+    display: flex !important;
+    justify-content: space-around !important;
+}
+
+nav .navbar-pages img {
+    border-radius: 100% !important;
+}
+
+nav .navbar-pages ul {
+    padding: 0 !important;
+}
+
+nav .navbar-pages ul li {
+    display: inline-block !important;
+    margin: 10px 0 !important;
+    text-shadow: 1px 1px 1px rgba(219, 219, 219, 0.7) !important;
+}
+
+nav .navbar-pages ul li:nth-child(2) {
+    margin: 0 5px !important;
+}
+
+nav .navbar-pages ul li a {
+    text-decoration: none;
+    color: black !important;
+    line-height: 30px;
+}
+
+nav .navbar-pages ul li:hover a::after {
+    content: " " !important;
+    display: block !important;
+    border-bottom: 3px solid #0b63dc !important;
+    width: 50% !important;
+    margin: auto !important;
+    height: 0px !important;
+}
+
+nav .navbar-pages ul li a h1 {
+    text-transform: uppercase !important;
+    font-size: 15px;
+    margin-top: 10px !important;
+    font-weight: 700 !important;
+    font-family: "Titillium Web", sans-serif !important;
+    text-decoration: none;
+    line-height: 10px;
+    text-shadow: 1px 1px 1px rgba(219, 219, 219, 0.7) !important;
+}
+
+nav .navbar-pages ul li .active::after {
+    content: " " !important;
+    display: block !important;
+    border-bottom: 3px solid #0b63dc !important;
+    width: 50% !important;
+    margin: auto !important;
+    height: 0px !important;
+}
+
+
+/* akhir nav .navbar-pagesbar */
+
+
+/* awal contact */
+
+.alert {
+    margin-bottom: 20px !important;
+}
+
+#contact {
+    margin: 130px 30px 0 30px !important;
+}
+
+#contact h1 {
+    margin-bottom: 20px !important;
+    color: #2d2d2d;
+}
+
+
+/* akhir contact */
+
+
+/* awal footer */
+
+footer::before {
+    content: "";
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #2d2d2d;
+    width: 90%;
+    margin: 0 auto 10px auto;
+    height: 0px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    color: #2d2d2d;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #2d2d2d;
+}
+
+footer p i {
+    text-decoration: none;
+    color: #2d2d2d;
+}
+
+footer a i {
+    text-decoration: none;
+    color: #2d2d2d;
+    margin: 2px !important;
+}
+
+
+/* akhir footer */
