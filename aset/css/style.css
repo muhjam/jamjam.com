@@ -69,7 +69,7 @@ nav .navbar-pages ul li a {
     line-height: 30px;
 }
 
-nav .navbar-pages ul li:hover a::after {
+nav .navbar-pages ul li a:hover::after {
     content: " ";
     display: block;
     border-bottom: 3px solid #0b63dc;
