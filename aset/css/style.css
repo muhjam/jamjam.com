@@ -270,61 +270,6 @@ section {
     flex-wrap: wrap;
 }
 
-
-/* desktop */
-
-@media (min-width: 992px) {
-    nav .navbar-pages ul li a:hover::after {
-        content: " " !important;
-        display: block !important;
-        border-bottom: 3px solid #0b63dc !important;
-        width: 50% !important;
-        margin: auto !important;
-        height: 0px !important;
-    }
-    #work .container .card {
-        width: 30%;
-        margin-bottom: 20px;
-    }
-}
-
-
-/* tablet */
-
-@media (max-width: 991px) {
-    #work .container .card {
-        width: 45%;
-        margin-bottom: 20px;
-    }
-}
-
-
-/* mobile */
-
-@media (max-width: 425px) {
-    #skill .container .row {
-        color: #2d2d2d;
-        display: flex;
-        justify-content: space-around;
-        overflow: scroll;
-        padding-left: 50px;
-    }
-    #work .container .card {
-        width: 90%;
-        margin: 0 auto 30px auto;
-    }
-}
-
-@media (max-width: 320px) {
-    #skill .container .row {
-        color: #2d2d2d;
-        display: flex;
-        justify-content: space-around;
-        overflow: scroll;
-        padding-left: 100px;
-    }
-}
-
 #work .container .card img {
     width: 100%;
     height: 200px;
@@ -560,6 +505,85 @@ footer a i {
 
 
 /* akhir footer */
+
+
+/* desktop */
+
+@media (min-width: 992px) {
+    nav .navbar-pages ul li a:hover::after {
+        content: " " !important;
+        display: block !important;
+        border-bottom: 3px solid #0b63dc !important;
+        width: 50% !important;
+        margin: auto !important;
+        height: 0px !important;
+    }
+    #work .container .card {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* tablet */
+
+@media (max-width: 991px) {
+    #work .container .card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* mobile */
+
+@media (max-width: 500px) {
+    #skill .container .row {
+        color: #2d2d2d;
+        display: flex;
+        justify-content: space-around;
+        overflow: scroll;
+        padding-left: 50px;
+    }
+    #work .container .card {
+        width: 90%;
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media (max-width: 470px) {
+    #skill .container .row {
+        color: #2d2d2d;
+        display: flex;
+        justify-content: space-around;
+        overflow: scroll;
+        padding-left: 120px;
+    }
+    #work .container .card {
+        width: 90%;
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media (max-width: 375px) {
+    #skill .container .row {
+        color: #2d2d2d;
+        display: flex;
+        justify-content: space-around;
+        overflow: scroll;
+        padding-left: 160px;
+    }
+}
+
+@media (max-width: 320px) {
+    #skill .container .row {
+        color: #2d2d2d;
+        display: flex;
+        justify-content: space-around;
+        overflow: scroll;
+        padding-left: 200px;
+    }
+}
 
 
 /* clear CSS */
