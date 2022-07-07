@@ -210,7 +210,6 @@ header .container .wrapper div h1 {
 header .container p {
     font-weight: 500;
     color: #ffff;
-    text-shadow: 1px 1px 1px rgba(219, 219, 219, 0.7);
 }
 
 
@@ -246,6 +245,7 @@ section {
     color: #2d2d2d;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 #skill .container .row .col h4 {
