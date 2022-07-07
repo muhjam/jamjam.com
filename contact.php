@@ -11,14 +11,17 @@
 	<meta name="keywords"
 		content="Muhamad Jamaludin, muhamadjamaludinpad, Muhamad Jamaludin Padmawinata, jamjam, muhjmlpad, front-end, back-end" />
 	<meta name="author" content="Muhamad Jamaludin" />
+	<link rel="apple-touch-icon" sizes="180x180" href="aset/img/icon.png" />
+	<link rel="shortcut icon" href="aset/img/icon.png" />
+	<!-- icon -->
+	<link rel="icon" href="aset/img/icon.png" />
+
+	<title>Jam Jam | Developer</title>
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
 		integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous" />
 
-	<!-- icon -->
-	<link rel="icon" href="aset/img/icon.png" />
-	<title>Jam Jam</title>
 
 	<!-- font Awesome -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
