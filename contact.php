@@ -118,18 +118,6 @@
 		<p class="">
 			<i class="far fa-copyright"></i> 2022
 			<a href="https://www.instagram.com/muhamadjamaludinpad/" target="_blank">Muhamad Jamaludin</a>. Created With Love.
-			<br />
-			Some Picture From:
-			<a href="https://unsplash.com/" target="_blank" style="text-decoration: none; color: #151e3d">Unsplash.</a>
-		</p>
-
-		<a href="hhttps://www.instagram.com/muhamadjamaludinpad/" target="_blank">
-			<i class="fab fa-instagram"></i></a>
-
-		<a href="https://www.facebook.com/profile.php?id=100078019380277" target="_blank"><i
-				class="fab fa-facebook"></i></a>
-		<a href="https://twitter.com/muhjmlpad" target="_blank"><i class="fab fa-twitter"></i></a>
-		<a href="https://api.whatsapp.com/send?phone=6283124356686" target="_blank"><i class="fab fa-whatsapp"></i></a>
 	</footer>
 	<!-- akhir footer -->
 
