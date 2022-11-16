@@ -66,6 +66,14 @@ nav .navbar-pages ul li a {
   text-decoration: none;
   color: #ffff;
   line-height: 30px;
+  transition: 1s all;
+}
+
+nav .navbar-pages ul li a::after {
+  content: " ";
+  width: 0%;
+  border-bottom: 0px solid #0b63dc;
+  transition: 0.3s;
 }
 
 nav .navbar-pages ul li .active::after {
@@ -74,7 +82,6 @@ nav .navbar-pages ul li .active::after {
   border-bottom: 3px solid #0b63dc;
   width: 50%;
   margin: auto;
-  height: 0px;
 }
 
 nav #topbar {
@@ -506,12 +513,11 @@ footer a i {
 
 @media (min-width: 992px) {
   nav .navbar-pages ul li a:hover::after {
-    content: " " !important;
-    display: block !important;
-    border-bottom: 3px solid #0b63dc !important;
-    width: 50% !important;
-    margin: auto !important;
-    height: 0px !important;
+    content: " ";
+    display: block;
+    border-bottom: 3px solid #0b63dc;
+    width: 50%;
+    margin: auto;
   }
   #work .container .card {
     width: 30%;
