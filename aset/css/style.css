@@ -361,27 +361,6 @@ section {
   flex-wrap: wrap;
 }
 
-/* desktop */
-@media (min-width: 992px) {
-  #social .container .card {
-    width: 30%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    height: 500px;
-    overflow: scroll;
-  }
-}
-
-/* mobile */
-@media (max-width: 991px) {
-  #social .container .card {
-    width: 90%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    margin: 0 auto 20px auto;
-  }
-}
-
 #social .container .card .top {
   width: 100%;
 }
@@ -509,8 +488,7 @@ footer a i {
 /* akhir footer */
 
 /* desktop */
-
-@media (min-width: 992px) {
+@media (min-width: 769px) {
   nav .navbar-pages ul li a:hover::after {
     content: " ";
     display: block;
@@ -525,8 +503,14 @@ footer a i {
 }
 
 /* tablet */
+@media (max-width: 768px) {
+  #skill .container .row {
+    color: #2d2d2d;
+    display: flex;
+    justify-content: flex-start;
+    overflow: scroll;
+  }
 
-@media (max-width: 991px) {
   #work .container .card {
     width: 45%;
     margin-bottom: 20px;
@@ -534,14 +518,7 @@ footer a i {
 }
 
 /* mobile */
-
-@media (max-width: 700px) {
-  #skill .container .row {
-    color: #2d2d2d;
-    display: flex;
-    justify-content: flex-start;
-    overflow: scroll;
-  }
+@media (max-width: 425px) {
   #work .container .card {
     width: 90%;
     margin: 0 auto 30px auto;
