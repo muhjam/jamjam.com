@@ -314,7 +314,6 @@ section {
 #work .container .card .text p.title {
   width: 300px;
 }
-
 /* akhir work */
 
 /* awal about */
@@ -518,6 +517,9 @@ footer a i {
     width: 45%;
     margin-bottom: 20px;
   }
+  #work .container .card .text p.title {
+    width: 300px;
+  }
 }
 
 /* mobile */
@@ -525,6 +527,9 @@ footer a i {
   #work .container .card {
     width: 90%;
     margin: 0 auto 30px auto;
+  }
+  #work .container .card .text p.title {
+    width: 200px;
   }
 }
 
