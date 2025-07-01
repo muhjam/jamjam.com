@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "works": "Karya",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "Halo, Saya",
+    "name": "{name}",
+    "role": "Full Stack Developer",
+    "description": "Saya membangun pengalaman digital yang luar biasa. Saat ini, saya fokus dalam membangun aplikasi web full-stack yang responsif.",
+    "cta": "Unduh CV"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "description": "Saya seorang Full Stack Developer yang bersemangat dengan keahlian dalam teknologi web modern. Saya suka menciptakan aplikasi yang indah, responsif, dan ramah pengguna yang memberikan nilai nyata bagi pengguna."
+  },
+  "works": {
+    "title": "Karya Saya",
+    "viewProject": "Lihat Proyek"
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "description": "Ada proyek yang ingin dikerjakan bersama atau sekedar menyapa? Jangan ragu untuk menghubungi saya!",
+    "form": {
+      "title": "Kirimkan saya pesan",
+      "name": "Nama Anda",
+      "email": "Email Anda",
+      "message": "Pesan Anda",
+      "submit": "Kirim Pesan"
+    },
+    "location": "Lokasi",
+    "availability": "Tersedia untuk pekerjaan lepas"
+  },
+  "footer": {
+    "copyright": "© {year} Hak Cipta Dilindungi.",
+    "builtWith": "Dibangun dengan Next.js, Tailwind CSS dan ❤️"
+  },
+  "present": "Sekarang"
+}
