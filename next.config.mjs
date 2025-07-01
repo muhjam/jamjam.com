@@ -11,10 +11,8 @@ const nextConfig = {
       },
     ],
   },
-  i18n: {
-    locales: ['en', 'id'],
-    defaultLocale: 'en',
-  },
+  // Remove the old i18n configuration as it's not compatible with App Router
+  // i18n handling is now done through the routing system
 };
 
 export default nextConfig;
