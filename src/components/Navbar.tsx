@@ -1,19 +1,19 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useTranslations, useLocale } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useActiveSection } from '@/hooks/useActiveSection';
 
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations();
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const activeSection = useActiveSection();
 
   useEffect(() => {
     setMounted(true);
@@ -21,15 +21,17 @@ const Navbar = () => {
 
   if (!mounted) return null;
 
-
   const navLinks = [
-    { name: t('common.home'), href: `/${locale}` },
-    { name: t('common.about'), href: `/${locale}/#about` },
-    { name: t('common.works'), href: `/${locale}/#works` },
-    { name: t('common.contact'), href: `/${locale}/#contact` }
+    { name: t('common.home'), href: `/${locale}`, section: 'hero' },
+    { name: t('common.about'), href: `/${locale}/#about`, section: 'about' },
+    { name: t('common.works'), href: `/${locale}/#works`, section: 'works' },
+    { name: t('common.contact'), href: `/${locale}/#contact`, section: 'contact' }
   ];
 
-  const isActive = (href: string) => pathname === href || pathname.startsWith(href);
+  const isActive = (section: string) => {
+    if (section === 'hero' && activeSection === 'home') return true;
+    return activeSection === section;
+  };
 
   return (
     <header className="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
@@ -45,10 +47,10 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  isActive(link.href)
-                    ? 'text-white bg-gray-900 dark:bg-gray-800'
-                    : 'text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white'
+                className={`relative px-3 py-2 text-sm font-medium transition-all duration-200 ${
+                  isActive(link.section)
+                    ? 'text-blue-600 dark:text-blue-400 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400'
+                    : 'text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400'
                 }`}
               >
                 {link.name}
@@ -78,10 +80,10 @@ const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`block px-3 py-2 rounded-md text-base font-medium ${
-                isActive(link.href)
-                  ? 'text-white bg-gray-900 dark:bg-gray-800'
-                  : 'text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white'
+              className={`block relative px-3 py-2 text-base font-medium transition-all duration-200 ${
+                isActive(link.section)
+                  ? 'text-blue-600 dark:text-blue-400 border-l-4 border-blue-600 dark:border-blue-400 pl-2'
+                  : 'text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400'
               }`}
               onClick={() => setIsOpen(false)}
             >
