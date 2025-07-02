@@ -13,7 +13,7 @@ export default function About() {
   const t = useTranslations();
   
   // Get the experience data from translations
-  const experience = t.raw('experience') as unknown as Experience[];
+  const experience = t.raw('about.experience') as unknown as Experience[];
 
   return (
     <section 
