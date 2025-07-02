@@ -9,12 +9,6 @@ import { Suspense } from 'react';
 type Locale = 'en' | 'id';
 const locales: Locale[] = ['en', 'id'];
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-[50vh]">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-  </div>
-);
 
 // Dynamically import components with loading fallback
 const Navbar = dynamic(() => import('@/components/Navbar'), { 
@@ -23,22 +17,18 @@ const Navbar = dynamic(() => import('@/components/Navbar'), {
 });
 
 const Hero = dynamic(() => import('@/components/sections/Hero'), { 
-  loading: LoadingSpinner,
   ssr: false 
 });
 
 const About = dynamic(() => import('@/components/sections/About'), { 
-  loading: LoadingSpinner,
   ssr: false 
 });
 
 const Works = dynamic(() => import('@/components/sections/Works'), { 
-  loading: LoadingSpinner,
   ssr: false 
 });
 
 const Contact = dynamic(() => import('@/components/sections/Contact'), { 
-  loading: LoadingSpinner,
   ssr: false 
 });
 
@@ -60,16 +50,16 @@ function PageContent() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-1">
-        <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={""}>
           <Hero />
         </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={""}>
           <About />
         </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={""}>
           <Works />
         </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={""}>
           <Contact />
         </Suspense>
       </main>
