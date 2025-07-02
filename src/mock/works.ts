@@ -27,6 +27,19 @@ export const works: WorkItem[] = [
   },
   {
     id: '2',
+    title: 'Final Project',
+    description: {
+      en: 'Final project for graduation in engineering at Universitas Pasundan, titled "Automation of High School Mathematics Problem Creation Using Open AI GPT-4o". If you want to try logging in as NUPTK:"213040057" PW:"Jamjam123".',
+      id: 'Proyek akhir untuk kelulusan sarjana teknik di Universitas Pasundan, dengan judul "Otomatisasi Pembuatan Soal Matematika Tingkat SMA Menggunakan Teknologi Open AI GPT-4o". Jika anda mau coba login sebagai NUPTK:"213040057" PW:"Jamjam123".'
+    },
+    image: '/images/final-project.png',
+    tools: ['Next.js', 'Javascript', 'Tailwind CSS', 'Open AI'],
+    startDate: '2025-05',
+    endDate: '2025-08',
+    link: 'https://tugas-akhir.jamjam.my.id'
+  },
+  {
+    id: '3',
     title: 'Journal International',
     description: {
       en: 'Researcher at Universitas Pasundan and Changwon University. Published research articles on AI in education, focusing on automated test creation aligned with the national curriculum. Lead author of: Automation of Indonesian High School Mathematics Assessment Generation Using OpenAI GPT-4o. Contributed to prompt engineering, model evaluation, and data-driven exam design.',
@@ -38,7 +51,7 @@ export const works: WorkItem[] = [
     endDate: '2025-08'
   },
   {
-    id: '3',
+    id: '4',
     title: 'Conference International - KIICE 2025',
     description: {
       en: 'Presented at the KIICE Conference (Korea Institute of Intelligent Computing and Engineering) on AI in education. Co-authored paper: Empowering Education with AI: Generating Indonesian High School Mathematics Exams Using ChatGPT 4.0. Collaborated across institutions in applying NLP and prompt engineering for educational assessment.',
@@ -50,7 +63,7 @@ export const works: WorkItem[] = [
     endDate: '2025-08'
   },
   {
-    id: '4',
+    id: '5',
     title: 'AI Reservation Japan',
     description: {
       en: 'Built a dashboard and user pages for restaurant call reservations. Integrated an AI-powered voice assistant to handle customer calls. Developed using Next.js, TypeScript, and Tailwind CSS.',
@@ -62,7 +75,7 @@ export const works: WorkItem[] = [
     endDate: '2025-06'
   },
   {
-    id: '5',
+    id: '6',
     title: 'SHIGYOcloud Japan',
     description: {
       en: 'Developed a document-aware AI chatbot using Next.js, NestJS, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
@@ -74,7 +87,7 @@ export const works: WorkItem[] = [
     endDate: '2025-06'
   },
   {
-    id: '6',
+    id: '7',
     title: 'Anarag Japan',
     description: {
       en: 'Built a document-aware AI chatbot using Next.js, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
@@ -86,7 +99,7 @@ export const works: WorkItem[] = [
     endDate: '2025-01'
   },
   {
-    id: '7',
+    id: '8',
     title: 'Alola Singapore',
     description: {
       en: 'Developed a travel booking platform with chatbot-based customer service. Built a responsive interface using Next.js and Tailwind CSS. Enhanced user experience with real-time interactions and seamless navigation.',
@@ -99,7 +112,7 @@ export const works: WorkItem[] = [
     link: 'https://alola.com'
   },
   {
-    id: '8',
+    id: '9',
     title: 'Organization IOM ITB',
     description: {
       en: 'Built a donation platform for ITB alumni using Vue.js, Express.js, and Tailwind CSS. Designed a responsive user interface and streamlined the donation workflow. Enabled secure transactions and an admin dashboard for contribution tracking.',
@@ -111,7 +124,7 @@ export const works: WorkItem[] = [
     endDate: '2025-05'
   },
   {
-    id: '9',
+    id: '10',
     title: 'Devcode',
     description: {
       en: 'Built a coding challenge and job search platform using React.js, Next.js, Vue.js, and Node.js. Trained AI models to automatically generate coding problems and evaluate solutions. Accelerated candidate evaluation with real-time code execution and ranking systems.',
@@ -123,7 +136,7 @@ export const works: WorkItem[] = [
     endDate: '2025-01'
   },
   {
-    id: '10',
+    id: '11',
     title: 'Lecturer Assistant',
     description: {
       en: 'Taught computer science students about algorithms and programming using Java. Instructed students in machine learning using Google Colab with Python.',
