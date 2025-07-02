@@ -32,7 +32,7 @@ export default function LocaleLayout({
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider>
           <ThemeInitializer />
           <ClientLayout locale={locale}>
             <div className="flex flex-col min-h-screen">
