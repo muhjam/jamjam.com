@@ -5,9 +5,32 @@ import { useEffect, useRef } from 'react';
 import { FiPhone, FiMapPin } from 'react-icons/fi';
 import { socials } from '@/mock/socials';
 
+interface TallyOptions {
+  width?: number;
+  alignLeft?: number;
+  hideTitle?: number;
+  transparentBackground?: number;
+  dynamicHeight?: number;
+  hiddenFields?: {
+    name?: FormDataEntryValue | null;
+    email?: FormDataEntryValue | null;
+    message?: FormDataEntryValue | null;
+    [key: string]: FormDataEntryValue | null | undefined;
+  };
+  onClose?: () => void;
+}
+
+declare global {
+  interface Window {
+    Tally?: {
+      openPopup: (formId: string, options?: TallyOptions) => void;
+    };
+  }
+}
+
 export default function Contact() {
   const t = useTranslations();
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const tallyIframeRef = useRef<HTMLIFrameElement>(null);
   
   // Debug: Log available translation keys
   useEffect(() => {
@@ -16,7 +39,6 @@ export default function Contact() {
   }, [t]);
 
   useEffect(() => {
-    // Load Tally embed script
     const script = document.createElement('script');
     script.src = 'https://tally.so/widgets/embed.js';
     script.async = true;
@@ -26,21 +48,6 @@ export default function Contact() {
       document.body.removeChild(script);
     };
   }, []);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-
-    // Construct Tally.so URL with query parameters
-    const tallyUrl = `https://tally.so/r/3qqqj9?name=${encodeURIComponent(name as string)}&email=${encodeURIComponent(email as string)}&message=${encodeURIComponent(message as string)}`;
-
-    // Open Tally.so in new tab or redirect
-    window.location.href = tallyUrl;
-  };
 
   return (
     <section 
@@ -63,69 +70,20 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
               {t('contact.form.title')}
             </h3>
-            {/* Hidden Tally.so iframe */}
-            <iframe
-              ref={iframeRef}
-              data-tally-src="https://tally.so/embed/3qqqj9?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              className="hidden"
-              title="Contact Form"
-            />
-            {/* Visible form */}
-            <form 
-              onSubmit={handleSubmit}
-              className="space-y-6"
-            >
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  {t('contact.form.name')}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder={t('contact.form.name')}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  {t('contact.form.email')}
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder={t('contact.form.email')}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  {t('contact.form.message')}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  placeholder={t('contact.form.message')}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
-                ></textarea>
-              </div>
-              
-              <div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  {t('contact.form.submit')}
-                </button>
-              </div>
-            </form>
+            {/* Tally.so iframe */}
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+              <iframe
+                ref={tallyIframeRef}
+                src="https://tally.so/embed/3qqqj9?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1&backgroundColor=%23F3F4F6&buttonFullWidth=1"
+                width="100%"
+                height="400"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="Contact Form"
+                className="rounded-lg"
+              ></iframe>
+            </div>
           </div>
           
           <div className="space-y-8">

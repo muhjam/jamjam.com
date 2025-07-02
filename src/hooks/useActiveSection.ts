@@ -7,12 +7,13 @@ export const useActiveSection = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: [0.1, 0.25, 0.5, 0.75, 1], // Multiple thresholds for better detection
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        // Consider a section visible if it's at least 10% visible
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
           setActiveSection(entry.target.id);
         }
       });

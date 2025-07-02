@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode, useEffect, useState } from 'react';
-import { NextIntlClientProvider } from 'next-intl';
+import { AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
 
 interface ClientLayoutProps {
   children: ReactNode;
@@ -77,7 +77,7 @@ export default function ClientLayout({ children, locale }: ClientLayoutProps) {
   }
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages as AbstractIntlMessages}>
       {children}
     </NextIntlClientProvider>
   );

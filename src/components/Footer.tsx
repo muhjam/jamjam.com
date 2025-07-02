@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { socials } from '@/mock/socials';
 
 const Footer = () => {
@@ -71,14 +71,14 @@ const Footer = () => {
           <p className="text-center text-gray-400">
             {t('footer.copyright', { year: currentYear })}
           </p>
-          <div className="flex justify-center space-x-6 mt-4">
+          {/* <div className="flex justify-center space-x-6 mt-4">
             <Link href="/privacy" className="text-gray-400 hover:text-white">
               {t('footer.privacy')}
             </Link>
             <Link href="/terms" className="text-gray-400 hover:text-white">
               {t('footer.terms')}
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
