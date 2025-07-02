@@ -132,7 +132,7 @@ export default function Contact() {
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">
                       {t('contact.email')}
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400">your.email@example.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">muhhjam@gmail.com</p>
                   </div>
                 </div>
                 
@@ -144,7 +144,7 @@ export default function Contact() {
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">
                       {t('contact.phone')}
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400">+1 (234) 567-890</p>
+                    <p className="text-gray-600 dark:text-gray-400">+62 812-5757-8571</p>
                   </div>
                 </div>
                 
