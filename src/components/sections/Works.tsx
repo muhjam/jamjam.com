@@ -106,7 +106,7 @@ export default function Works() {
 
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {Object.entries(t.raw('filters') as Record<string, string>).map(([key, label]) => (
+          {Object.entries(t.raw('works.filters') as Record<string, string>).map(([key, label]) => (
             <button
               key={key}
               className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${

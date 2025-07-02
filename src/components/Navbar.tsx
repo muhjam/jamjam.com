@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useTranslations, useLocale } from 'next-intl';
@@ -18,6 +17,28 @@ const Navbar = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.split('#')[1];
+    if (!targetId) {
+      // If no hash (home), scroll to top smoothly
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // For other sections, scroll to the section
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+    // Close mobile menu if open
+    setIsOpen(false);
+  };
 
   if (!mounted) return null;
 
@@ -37,16 +58,21 @@ const Navbar = () => {
     <header className="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <Link href={`/${locale}`} className="text-xl font-bold text-gray-900 dark:text-white">
+          <a
+            href={`/${locale}`}
+            onClick={(e) => handleNavClick(e, `/${locale}`)}
+            className="text-xl font-bold text-gray-900 dark:text-white"
+          >
             {t('common.portfolio')}
-          </Link>
+          </a>
 
           {/* Desktop */}
           <nav className="hidden md:flex items-center space-x-4">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-200 ${
                   isActive(link.section)
                     ? 'text-blue-600 dark:text-blue-400 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400'
@@ -54,7 +80,7 @@ const Navbar = () => {
                 }`}
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
             <LanguageSwitcher />
             <ThemeToggle />
@@ -77,18 +103,18 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden px-2 pb-3 space-y-1 bg-white dark:bg-gray-800">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className={`block relative px-3 py-2 text-base font-medium transition-all duration-200 ${
                 isActive(link.section)
                   ? 'text-blue-600 dark:text-blue-400 border-l-4 border-blue-600 dark:border-blue-400 pl-2'
                   : 'text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400'
               }`}
-              onClick={() => setIsOpen(false)}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
           <div className="px-3 py-2">
             <LanguageSwitcher />
