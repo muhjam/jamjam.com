@@ -1,0 +1,29 @@
+{
+  "title": "Karya Saya",
+  "subtitle": "Beberapa proyek terbaru saya",
+  "viewProject": "Lihat Proyek",
+  "present": "Sekarang",
+  "filters": {
+    "all": "Semua",
+    "web": "Web",
+    "mobile": "Mobile",
+    "design": "Desain"
+  },
+  "projects": {
+    "1": {
+      "title": "Platform E-commerce",
+      "description": "Platform e-commerce lengkap dengan manajemen produk, keranjang, dan integrasi pembayaran.",
+      "tags": ["React", "Node.js", "MongoDB", "Stripe"]
+    },
+    "2": {
+      "title": "Aplikasi Manajemen Tugas",
+      "description": "Aplikasi manajemen tugas kolaboratif dengan pembaruan waktu nyata dan fitur tim.",
+      "tags": ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"]
+    },
+    "3": {
+      "title": "Website Portofolio",
+      "description": "Website portofolio pribadi untuk menampilkan proyek dan keahlian saya.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+    }
+  }
+}

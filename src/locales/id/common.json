@@ -1,0 +1,11 @@
+{
+  "common": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "works": "Karya",
+    "contact": "Kontak",
+    "menu": "Menu",
+    "close": "Tutup",
+    "portfolio": "Portofolio"
+  }
+}

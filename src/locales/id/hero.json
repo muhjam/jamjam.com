@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "greeting": "Halo, saya",
+    "name": "Muhamad Jamaludin",
+    "title": "Pengembang Full Stack",
+    "description": "Saya membangun aplikasi web yang menakjubkan dengan teknologi modern.",
+    "contactMe": "Hubungi Saya",
+    "downloadCV": "Unduh CV"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "about": {
+    "title": "Tentang Saya",
+    "subtitle": "Kenali saya lebih dekat",
+    "description1": "Saya seorang Full Stack Developer yang bersemangat dengan pengalaman dalam membangun aplikasi web modern menggunakan teknologi terbaru. Saya senang mengubah ide menjadi kenyataan melalui kode yang bersih dan efisien.",
+    "description2": "Dengan dasar yang kuat dalam pengembangan frontend dan backend, saya menciptakan pengalaman pengguna yang mulus dan solusi yang dapat diskalakan untuk memecahkan masalah dunia nyata.",
+    "skillsTitle": "Keterampilan",
+    "experienceTitle": "Pengalaman",
+    "experience": [
+      {
+        "title": "Senior Full Stack Developer",
+        "company": "Tech Company Inc.",
+        "period": "2021 - Sekarang",
+        "description": "Membangun aplikasi web yang dapat diskalakan dan memimpin tim pengembang."
+      },
+      {
+        "title": "Frontend Developer",
+        "company": "Agen Digital",
+        "period": "2019 - 2021",
+        "description": "Mengembangkan situs web dan aplikasi web yang responsif untuk berbagai klien."
+      }
+    ],
+    "educationTitle": "Pendidikan"
+  }
+}

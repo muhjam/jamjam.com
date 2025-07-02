@@ -4,12 +4,11 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { useTranslations, useLocale } from 'next-intl';
 
-interface NavbarProps {
-  locale: 'en' | 'id';
-}
-
-const Navbar: React.FC<NavbarProps> = ({ locale }) => {
+const Navbar = () => {
+  const locale = useLocale();
+  const t = useTranslations();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -20,17 +19,12 @@ const Navbar: React.FC<NavbarProps> = ({ locale }) => {
 
   if (!mounted) return null;
 
-  const navItems = {
-    en: { home: 'Home', about: 'About', works: 'Works', contact: 'Contact', menu: 'Menu', close: 'Close' },
-    id: { home: 'Beranda', about: 'Tentang', works: 'Karya', contact: 'Kontak', menu: 'Menu', close: 'Tutup' }
-  };
 
-  const t = navItems[locale];
   const navLinks = [
-    { name: t.home, href: `/${locale}` },
-    { name: t.about, href: `/${locale}/#about` },
-    { name: t.works, href: `/${locale}/#works` },
-    { name: t.contact, href: `/${locale}/#contact` }
+    { name: t('common.home'), href: `/${locale}` },
+    { name: t('common.about'), href: `/${locale}/#about` },
+    { name: t('common.works'), href: `/${locale}/#works` },
+    { name: t('common.contact'), href: `/${locale}/#contact` }
   ];
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href);
@@ -40,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <Link href={`/${locale}`} className="text-xl font-bold text-gray-900 dark:text-white">
-            {locale === 'id' ? 'Portofolio' : 'Portfolio'}
+            {t('common.portfolio')}
           </Link>
 
           {/* Desktop */}
@@ -72,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale }) => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md text-gray-700 dark:text-gray-300"
-              aria-label={isOpen ? t.close : t.menu}
+              aria-label={isOpen ? t('common.close') : t('common.menu')}
             >
               {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>

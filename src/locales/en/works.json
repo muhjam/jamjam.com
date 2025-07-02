@@ -1,0 +1,29 @@
+{
+  "title": "My Works",
+  "subtitle": "A selection of my recent projects",
+  "viewProject": "View Project",
+  "present": "Present",
+  "filters": {
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile",
+    "design": "Design"
+  },
+  "projects": {
+    "1": {
+      "title": "E-commerce Platform",
+      "description": "A full-featured e-commerce platform with product management, cart, and payment integration.",
+      "tags": ["React", "Node.js", "MongoDB", "Stripe"]
+    },
+    "2": {
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates and team features.",
+      "tags": ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"]
+    },
+    "3": {
+      "title": "Portfolio Website",
+      "description": "A personal portfolio website to showcase projects and skills.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+    }
+  }
+}

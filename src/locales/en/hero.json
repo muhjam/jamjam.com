@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Muhamad Jamaludin",
+    "title": "Full Stack Developer",
+    "description": "I build amazing web applications with modern technologies.",
+    "contactMe": "Contact Me",
+    "downloadCV": "Download CV"
+  }
+}

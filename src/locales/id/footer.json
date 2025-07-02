@@ -1,0 +1,14 @@
+{
+  "footer": {
+    "builtWith": "Dibuat dengan Next.js dan Tailwind CSS • {year}",
+    "quickLinks": "Tautan Cepat",
+    "home": "Beranda",
+    "about": "Tentang",
+    "works": "Karya",
+    "contact": "Kontak",
+    "connect": "Terhubung",
+    "copyright": "{year} Portofolio Saya. Seluruh hak cipta dilindungi.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat dan Ketentuan"
+  }
+}

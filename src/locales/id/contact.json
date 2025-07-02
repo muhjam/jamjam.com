@@ -1,0 +1,29 @@
+{
+  "contact": {
+    "title": "Hubungi Saya",
+    "description": "Jangan ragu untuk menghubungi saya untuk pertanyaan atau peluang kerja sama.",
+    "form": {
+      "title": "Kirim Pesan",
+      "name": "Nama Anda",
+      "email": "Email Anda",
+      "subject": "Subjek",
+      "message": "Pesan Anda",
+      "submit": "Kirim Pesan",
+      "success": "Pesan Anda berhasil dikirim!",
+      "error": "Terjadi kesalahan saat mengirim pesan. Silakan coba lagi."
+    },
+    "contactInfo": "Informasi Kontak",
+    "location": "Lokasi",
+    "email": "Email",
+    "phone": "Telepon",
+    "followMe": "Ikuti Saya",
+    "socialMedia": "Media Sosial",
+    "officeHours": "Jam Kerja",
+    "hours": "Senin - Jumat: 09:00 - 17:00",
+    "quickLinks": "Tautan Cepat",
+    "home": "Beranda",
+    "about": "Tentang",
+    "works": "Karya",
+    "contact": "Kontak"
+  }
+}

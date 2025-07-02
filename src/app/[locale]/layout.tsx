@@ -1,45 +1,45 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { ReactNode, useEffect } from 'react';
-import '../globals.css';
-import { Locale, locales } from '@/utils/i18n';
 import { notFound } from 'next/navigation';
+import ClientLayout from './client-layout';
+import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-interface LocaleLayoutProps {
-  children: ReactNode;
-  params: { locale: string };
-}
+// Define supported locales
+type Locale = 'en' | 'id';
+const locales: Locale[] = ['en', 'id'];
 
-export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const { locale } = params;
+export const metadata: Metadata = {
+  title: 'Jamjam',
+  description: 'Personal portfolio website',
+};
 
-  // Check if the requested locale is supported
-  if (!locales.includes(locale as Locale)) {
+export default function LocaleLayout({
+  children,
+  params: { locale }
+}: {
+  children: React.ReactNode;
+  params: { locale: Locale };
+}) {
+  // Validate the locale
+  if (!locales.includes(locale)) {
     notFound();
   }
 
-  // Set the document language
-  useEffect(() => {
-    document.documentElement.lang = locale;
-  }, [locale]);
-
   return (
-    <div className={`${inter.className} min-h-screen flex flex-col`}>
-      {/* @ts-expect-error Server Component */}
-      <Navbar locale={locale} />
-      <main className="flex-grow">
-        {children}
-      </main>
-      {/* @ts-expect-error Server Component */}
-      <Footer locale={locale} />
-    </div>
+    <html lang={locale} className="scroll-smooth">
+      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}>
+        <ClientLayout locale={locale}>
+          <div className="flex flex-col min-h-screen">
+            {children}
+          </div>
+        </ClientLayout>
+      </body>
+    </html>
   );
 }
 
-// This ensures that this layout is not statically generated at build time
-export const dynamic = 'force-dynamic';
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}

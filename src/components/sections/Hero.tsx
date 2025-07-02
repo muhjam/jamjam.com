@@ -1,64 +1,42 @@
 'use client';
 
-interface HeroProps {
-  locale: string;
-}
+import { useTranslations } from 'next-intl';
 
-// Terjemahan
-const messages = {
-  en: {
-    greeting: 'Hi, I\'m',
-    name: 'John Doe',
-    title: 'Full Stack Developer',
-    description: 'I build amazing web applications with modern technologies.',
-    button: 'Download CV'
-  },
-  id: {
-    greeting: 'Halo, saya',
-    name: 'John Doe',
-    title: 'Pengembang Full Stack',
-    description: 'Saya membangun aplikasi web yang menakjubkan dengan teknologi modern.',
-    button: 'Unduh CV'
-  }
-};
-
-type MessageKey = keyof typeof messages.en;
-
-export default function Hero({ locale }: HeroProps) {
-  const t = locale in messages ? messages[locale as keyof typeof messages] : messages.en;
+export default function Hero() {
+  const t = useTranslations();
   
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 pt-20 scroll-mt-20"
+      className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            {t.greeting}{' '}
+            {t('hero.greeting')}{' '}
             <span className="text-blue-600 dark:text-blue-400">
-              {t.name}
+              {t('hero.name')}
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-8">
-            {t.title}
+            {t('hero.title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
-            {t.description}
+            {t('hero.description')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
             <a
               href="#contact"
               className="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
-              {locale === 'id' ? 'Hubungi Saya' : 'Contact Me'}
+              {t('hero.contactMe')}
             </a>
             <a
               href="/cv.pdf"
               download
               className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 font-medium rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
             >
-              {t.button}
+              {t('hero.downloadCV')}
             </a>
           </div>
           <div className="flex justify-center space-x-6">

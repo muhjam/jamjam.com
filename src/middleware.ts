@@ -1,52 +1,30 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
 
-const PUBLIC_FILE = /^\.(.*)$/;
-const defaultLocale = 'en';
-const locales = ['en', 'id'];
-
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ['en', 'id'],
   
-  // Skip middleware for:
-  // 1. API routes
-  // 2. Next.js internals
-  // 3. Static files
-  // 4. Files in the public folder
-  if (
-    pathname.startsWith('/_next') ||
-    pathname.startsWith('/api') ||
-    pathname.startsWith('/static') ||
-    pathname.includes('/_next') ||
-    PUBLIC_FILE.test(pathname) ||
-    pathname.includes('.')
-  ) {
-    return NextResponse.next();
+  // Used when no locale matches
+  defaultLocale: 'en',
+  
+  // Locale prefixing behavior
+  localePrefix: 'as-needed',
+  
+  // Pathnames to ignore for locale prefixing
+  pathnames: {
+    '/': '/',
+    '/about': '/about',
+    '/works': '/works',
+    '/contact': '/contact'
   }
-
-  // Check if the default locale is in the pathname
-  if (pathname.startsWith(`/${defaultLocale}/`) || pathname === `/${defaultLocale}`) {
-    return NextResponse.redirect(
-      new URL(pathname.replace(`/${defaultLocale}`, '/'), request.url)
-    );
-  }
-
-  // Check if the path has a valid locale
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
-
-  // If no locale in path, redirect to include default locale
-  if (!pathnameHasLocale) {
-    const newPath = pathname === '/' ? `/${defaultLocale}` : `/${defaultLocale}${pathname}`;
-    return NextResponse.redirect(new URL(newPath, request.url));
-  }
-
-  return NextResponse.next();
-}
+});
 
 export const config = {
-  // Match all request paths except those that start with /_next, /api, /static, or end with a file extension
+  // Match all request paths except those that start with:
+  // - api (API routes)
+  // - _next/static (static files)
+  // - _next/image (image optimization files)
+  // - favicon.ico (favicon file)
   matcher: [
     '/((?!_next|api|favicon.ico|.*\..*).*)',
   ],

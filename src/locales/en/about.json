@@ -1,0 +1,25 @@
+{
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me better",
+    "description1": "I'm a passionate Full Stack Developer with experience in building modern web applications using the latest technologies. I love turning ideas into reality through clean and efficient code.",
+    "description2": "With a strong foundation in both frontend and backend development, I create seamless user experiences and scalable solutions that solve real-world problems.",
+    "skillsTitle": "Skills",
+    "experienceTitle": "Experience",
+    "experience": [
+      {
+        "title": "Senior Full Stack Developer",
+        "company": "Tech Company Inc.",
+        "period": "2021 - Present",
+        "description": "Building scalable web applications and leading a team of developers."
+      },
+      {
+        "title": "Frontend Developer",
+        "company": "Digital Agency",
+        "period": "2019 - 2021",
+        "description": "Developed responsive websites and web applications for various clients."
+      }
+    ],
+    "educationTitle": "Education"
+  }
+}
