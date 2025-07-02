@@ -8,16 +8,16 @@
     "experienceTitle": "Experience",
     "experience": [
       {
-        "title": "Senior Full Stack Developer",
-        "company": "Tech Company Inc.",
-        "period": "2021 - Present",
-        "description": "Building scalable web applications and leading a team of developers."
+        "title": "AI Engineer & Full Stack Developer",
+        "company": "Skyshi Digital Indonesia",
+        "period": "2023 Jul - Present",
+        "description": "Building scalable web applications powered by AI."
       },
       {
-        "title": "Frontend Developer",
-        "company": "Digital Agency",
-        "period": "2019 - 2021",
-        "description": "Developed responsive websites and web applications for various clients."
+        "title": "Assistant Lecturer",
+        "company": "Universitas Pasundan",
+        "period": "2022 Jan - 2025 Jul",
+        "description": "Teaching students about Algorithm and Machine Learning."
       }
     ],
     "educationTitle": "Education"

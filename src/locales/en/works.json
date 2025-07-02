@@ -12,20 +12,55 @@
   },
   "projects": {
     "1": {
-      "title": "E-commerce Platform",
-      "description": "A full-featured e-commerce platform with product management, cart, and payment integration.",
-      "tags": ["React", "Node.js", "MongoDB", "Stripe"]
+      "title": "Anarise Japan",
+      "description": "Building a coding challenge and job search platform using React.js, Next.js, Vue.js, and Node.js. Training AI models to automatically generate coding problems and evaluate solutions. Accelerating candidate evaluation with real-time code execution and ranking systems.",
+      "tags": ["React.js", "Next.js", "Vue.js", "Node.js", "Open AI"]
     },
     "2": {
-      "title": "Task Management App",
-      "description": "A collaborative task management application with real-time updates and team features.",
-      "tags": ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"]
+      "title": "Journal International",
+      "description": "Researcher at Universitas Pasundan and Changwon University. Published research articles on AI in education, focusing on automated test creation aligned with the national curriculum. Lead author of: Automation of Indonesian High School Mathematics Assessment Generation Using OpenAI GPT-4o. Contributed to prompt engineering, model evaluation, and data-driven exam design.",
+      "tags": ["Next.js", "Javascript", "Tailwind CSS", "Open AI"]
     },
     "3": {
-      "title": "Portfolio Website",
-      "description": "A personal portfolio website to showcase projects and skills.",
+      "title": "Conference International - KIICE 2025",
+      "description": "Presented at the KIICE Conference (Korea Institute of Intelligent Computing and Engineering) on AI in education. Co-authored paper: Empowering Education with AI: Generating Indonesian High School Mathematics Exams Using ChatGPT 4.0. Collaborated across institutions in applying NLP and prompt engineering for educational assessment.",
+      "tags": ["Next.js", "Javascript", "Tailwind CSS", "Open AI"]
+    },
+    "4": {
+      "title": "AI Reservation Japan",
+      "description": "Built a dashboard and user pages for restaurant call reservations. Integrated an AI-powered voice assistant to handle customer calls. Developed using Next.js, TypeScript, and Tailwind CSS.",
       "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+    },
+    "5": {
+      "title": "SHIGYOcloud Japan",
+      "description": "Developed a document-aware AI chatbot using Next.js, NestJS, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "NestJS", "RAGFlow"]
+    },
+    "6": {
+      "title": "Anarag Japan",
+      "description": "Built a document-aware AI chatbot using Next.js, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "RAGFlow"]
+    },
+    "7": {
+      "title": "Alola Singapore",
+      "description": "Developed a travel booking platform with chatbot-based customer service. Built a responsive interface using Next.js and Tailwind CSS. Enhanced user experience with real-time interactions and seamless navigation.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+    },
+    "8": {
+      "title": "Organization IOM ITB",
+      "description": "Built a donation platform for ITB alumni using Vue.js, Express.js, and Tailwind CSS. Designed a responsive user interface and streamlined the donation workflow. Enabled secure transactions and an admin dashboard for contribution tracking.",
+      "tags": ["Vue.js", "TypeScript", "Express.js", "Tailwind CSS"]
+    },
+    "9": {
+      "title": "Devcode",
+      "description": "Built a coding challenge and job search platform using React.js, Next.js, Vue.js, and Node.js. Trained AI models to automatically generate coding problems and evaluate solutions. Accelerated candidate evaluation with real-time code execution and ranking systems.",
+      "tags": ["React.js", "Next.js", "Vue.js", "Node.js", "Open AI"]
+    },
+    "10": {
+      "title": "Lecturer Assistant",
+      "description": "Taught computer science students about algorithms and programming using Java. Instructed students in machine learning using Google Colab with Python.",
+      "tags": ["Java", "Python", "Google Colab"]
     }
-    }
+  }
   }
 }

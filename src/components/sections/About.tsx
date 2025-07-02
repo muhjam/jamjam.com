@@ -48,8 +48,8 @@ export default function About() {
               </h3>
               <div className="space-y-3">
                 {[
-                  'React.js', 'Next.js', 'TypeScript', 'Node.js', 
-                  'Tailwind CSS', 'MongoDB', 'PostgreSQL', 'Docker'
+                  'RAGFlow', 'Dify', 'Next.js', 'Vue.js', 'Laravel', 'TypeScript', 'Python', 'Node.js', 
+                  'Tailwind CSS', 'Docker'
                 ].map((skill) => (
                   <div key={skill} className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mr-3" />

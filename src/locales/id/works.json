@@ -12,19 +12,54 @@
   },
   "projects": {
     "1": {
-      "title": "Platform E-commerce",
-      "description": "Platform e-commerce lengkap dengan manajemen produk, keranjang, dan integrasi pembayaran.",
-      "tags": ["React", "Node.js", "MongoDB", "Stripe"]
+      "title": "Anarise Japan",
+      "description": "Membangun platform tantangan coding dan pencarian kerja dengan React.js, Next.js, Vue.js, dan Node.js. Melatih model AI untuk menghasilkan masalah coding secara otomatis dan menilai solusi. Mempercepat evaluasi kandidat dengan eksekusi kode waktu nyata dan sistem peringkat.",
+      "tags": ["React.js", "Next.js", "Vue.js", "Node.js", "Open AI"]
     },
     "2": {
-      "title": "Aplikasi Manajemen Tugas",
-      "description": "Aplikasi manajemen tugas kolaboratif dengan pembaruan waktu nyata dan fitur tim.",
-      "tags": ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"]
+      "title": "Journal International",
+      "description": "Peneliti di Universitas Pasundan dan Universitas Changwon. Menerbitkan artikel penelitian tentang AI dalam pendidikan, berfokus pada pembuatan tes otomatis yang selaras dengan kurikulum nasional. Penulis utama dari: Automation of Indonesian High School Mathematics Assessment Generation Using OpenAI GPT-4o. Berkontribusi pada rekayasa prompt, evaluasi model, dan desain ujian berbasis data.",
+      "tags": ["Next.js", "Javascript", "Tailwind CSS", "Open AI"]
     },
     "3": {
-      "title": "Website Portofolio",
-      "description": "Website portofolio pribadi untuk menampilkan proyek dan keahlian saya.",
+      "title": "Conference International - KIICE 2025",
+      "description": "Dipresentasikan di Konferensi KIICE (Korea Institute of Intelligent Computing and Engineering) tentang AI dalam pendidikan. Menulis bersama makalah: Memberdayakan Pendidikan dengan AI: Menghasilkan Ujian Matematika SMA Indonesia Menggunakan ChatGPT 4.0. Berkolaborasi lintas institusi dalam penerapan NLP dan rekayasa prompt untuk penilaian pendidikan.",
+      "tags": ["Next.js", "Javascript", "Tailwind CSS", "Open AI"]
+    },
+    "4": {
+      "title": "AI Reservation Japan",
+      "description": "Membangun dasbor dan halaman pengguna untuk reservasi panggilan restoran. Mengintegrasikan asisten suara bertenaga AI untuk menangani panggilan pelanggan. Dikembangkan menggunakan Next.js, TypeScript, dan Tailwind CSS.",
       "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+    },
+    "5": {
+      "title": "SHIGYOcloud Japan",
+      "description": "Membangun chatbot AI yang sadar dokumen menggunakan Next.js, NestJS, RAGFlow, dan TypeScript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "NestJS", "RAGFlow"]
+    },
+    "6": {
+      "title": "Anarag Japan",
+      "description": "Membangun chatbot AI yang sadar dokumen menggunakan Next.js, RAGFlow, dan TypeScript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "RAGFlow"]
+    },
+    "7": {
+      "title": "Alola Singapore",
+      "description": "Mengembangkan platform pemesanan perjalanan dengan layanan pelanggan berbasis chatbot. Membangun antarmuka responsif menggunakan Next.js dan Tailwind CSS. Meningkatkan pengalaman pengguna dengan interaksi waktu nyata dan navigasi yang mulus.",
+      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+    },
+    "8": {
+      "title": "Organization IOM ITB",
+      "description": "Membangun platform donasi untuk alumni ITB menggunakan Vue.js, Express.js, dan Tailwind CSS. Merancang antarmuka pengguna yang responsif dan menyederhanakan alur kerja donasi. Memungkinkan transaksi yang aman dan dasbor admin untuk pelacakan kontribusi.",
+      "tags": ["Vue.js", "TypeScript", "Express.js", "Tailwind CSS"]
+    },
+    "9": {
+      "title": "Devcode",
+      "description": "Membangun platform tantangan coding dan pencarian kerja dengan React.js, Next.js, Vue.js, dan Node.js. Melatih model AI untuk menghasilkan masalah coding secara otomatis dan menilai solusi. Mempercepat evaluasi kandidat dengan eksekusi kode waktu nyata dan sistem peringkat.",
+      "tags": ["React.js", "Next.js", "Vue.js", "Node.js", "Open AI"]
+    },
+    "10":{
+      "title": "Lecturer Assistant",
+      "description": "Mengajar mahasiswa teknik informatika tentang algoritma dan pemrograman menggunakan bahasa Java. Mengajar mahasiswa teknik informatika tentang Mechine Learning menggunakan Google colabs bahasa Python.",
+      "tags": ["Java", "Python", "Google Colab"]
     }
   }
 }
