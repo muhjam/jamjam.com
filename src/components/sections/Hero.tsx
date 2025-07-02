@@ -33,7 +33,7 @@ export default function Hero() {
               {t('hero.contactMe')}
             </a>
             <a
-              href="/cv.pdf"
+              href="/files/CV-Muhamad Jamaludin.pdf"
               download
               className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 font-medium rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
             >
