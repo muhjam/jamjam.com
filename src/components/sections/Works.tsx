@@ -1,8 +1,10 @@
 'use client';
 
-import { works, type WorkItem } from '@/mock/works';
+import { works } from '@/mock/works';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { useMemo } from 'react';
+import { FiExternalLink } from 'react-icons/fi';
 
 type ProjectData = {
   id: string;
@@ -15,33 +17,79 @@ type ProjectData = {
   link?: string;
 };
 
+// Separate Project Card component for better performance
+const ProjectCard = ({ project }: { project: ProjectData }) => {
+  const t = useTranslations();
+  
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+      <div className="relative h-48 w-full">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="lazy"
+        />
+      </div>
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          {project.title}
+        </h3>
+        <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+          {project.description}
+        </p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.tools.map((tool, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 text-xs font-medium text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-100"
+            >
+              {tool}
+            </span>
+          ))}
+        </div>
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium mt-auto"
+          >
+            {t('works.viewProject')}
+            <FiExternalLink className="ml-2" />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default function Works() {
   const t = useTranslations();
   
-  // Get project data from the mock file and combine with translations
-  const getProjectData = (workItem: WorkItem): ProjectData | null => {
-    try {
-      // Fallback to mock data if translations are not available
-      const title = workItem.title;
-      const description = workItem.description.en;
-      const tags = workItem.tools;
-      
-      return {
-        id: workItem.id,
-        title,
-        description,
-        image: workItem.image,
-        tools: tags,
-        startDate: workItem.startDate,
-        endDate: workItem.endDate,
-        link: workItem.link
-      };
-    } catch (err) {
-      console.error(`Error getting project data for id: ${workItem.id}`, err);
-      return null;
-    }
-  };
+  // Memoize project data to prevent recalculation on re-renders
+  const projectsData = useMemo(() => {
+    return works.map((work) => {
+      try {
+        const project: ProjectData = {
+          id: work.id,
+          title: work.title,
+          description: work.description.en,
+          image: work.image,
+          tools: work.tools,
+          startDate: work.startDate,
+          endDate: work.endDate,
+          link: work.link
+        };
+        return project;
+      } catch (err) {
+        console.error(`Error processing project data for id: ${work.id}`, err);
+        return null;
+      }
+    }).filter((project): project is ProjectData => project !== null);
+  }, []);
 
   return (
     <section id="works" className="py-20 bg-gray-50 dark:bg-gray-900 scroll-mt-20">
@@ -74,72 +122,9 @@ export default function Works() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {works.map((work) => {
-            const projectData = getProjectData(work);
-            if (!projectData) {
-              console.warn(`No data found for project: ${work.id}`);
-              return null;
-            }
-            
-            return (
-              <div
-                key={projectData.id}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
-              >
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={projectData.image}
-                    alt={projectData.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {projectData.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                    {projectData.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {projectData.tools.map((tool, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 text-xs font-medium text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-100"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                  {projectData.link && (
-                    <a
-                      href={projectData.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium mt-auto"
-                    >
-                      {t('works.viewProject')}
-                      <svg
-                        className="w-4 h-4 ml-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    </a>
-                  )}
-                </div>
-              </div>
-            );
-          })}
+          {projectsData.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </div>
       </div>
     </section>

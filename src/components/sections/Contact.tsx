@@ -2,6 +2,15 @@
 
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
+import { 
+  FiGithub, 
+  FiLinkedin, 
+  FiInstagram, 
+  FiTwitter,
+  FiMail,
+  FiPhone,
+  FiMapPin
+} from 'react-icons/fi';
 
 export default function Contact() {
   const t = useTranslations();
@@ -90,16 +99,16 @@ export default function Contact() {
               </div>
               <div className="flex space-x-4 mt-8">
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="GitHub">
-                  <span className="text-2xl">🐙</span>
+                  <FiGithub size={24} />
                 </a>
                 <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="LinkedIn">
-                  <span className="text-2xl">💼</span>
+                  <FiLinkedin size={24} />
                 </a>
                 <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="Instagram">
-                  <span className="text-2xl">📷</span>
+                  <FiInstagram size={24} />
                 </a>
                 <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="Twitter">
-                  <span className="text-2xl">🐦</span>
+                  <FiTwitter size={24} />
                 </a>
               </div>
             </form>
@@ -117,7 +126,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
-                    <span className="text-blue-600 dark:text-blue-400">✉️</span>
+                    <FiMail className="text-blue-600 dark:text-blue-400" size={20} />
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">
@@ -129,7 +138,7 @@ export default function Contact() {
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
-                    <span className="text-blue-600 dark:text-blue-400">📞</span>
+                    <FiPhone className="text-blue-600 dark:text-blue-400" size={20} />
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">
@@ -141,7 +150,7 @@ export default function Contact() {
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
-                    <span className="text-blue-600 dark:text-blue-400">📍</span>
+                    <FiMapPin className="text-blue-600 dark:text-blue-400" size={20} />
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">{t('contact.location')}</h4>
@@ -159,16 +168,16 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="GitHub">
-                  <span className="text-2xl">🐙</span>
+                  <FiGithub size={24} />
                 </a>
                 <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="LinkedIn">
-                  <span className="text-2xl">💼</span>
+                  <FiLinkedin size={24} />
                 </a>
                 <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="Instagram">
-                  <span className="text-2xl">📷</span>
+                  <FiInstagram size={24} />
                 </a>
                 <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="Twitter">
-                  <span className="text-2xl">🐦</span>
+                  <FiTwitter size={24} />
                 </a>
               </div>
             </div>

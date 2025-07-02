@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useTranslations, useLocale } from 'next-intl';
+import ThemeToggle from './ThemeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const locale = useLocale();
@@ -38,7 +40,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop */}
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex items-center space-x-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -52,17 +54,13 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              href={pathname ? pathname.replace(/^\/(en|id)/, locale === 'en' ? '/id' : '/en') : '#'}
-              className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-              locale={false}
-            >
-              {locale === 'en' ? 'ID' : 'EN'}
-            </Link>
+            <LanguageSwitcher />
+            <ThemeToggle />
           </nav>
 
           {/* Mobile */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md text-gray-700 dark:text-gray-300"
@@ -90,14 +88,9 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link
-            href={pathname ? pathname.replace(/^\/(en|id)/, locale === 'en' ? '/id' : '/en') : '#'}
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-            onClick={() => setIsOpen(false)}
-            locale={false}
-          >
-            {locale === 'en' ? '🇮🇩 ID' : '🇬🇧 EN'}
-          </Link>
+          <div className="px-3 py-2">
+            <LanguageSwitcher />
+          </div>
         </div>
       )}
     </header>
