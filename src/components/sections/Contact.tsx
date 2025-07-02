@@ -1,19 +1,47 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { FiPhone, FiMapPin } from 'react-icons/fi';
 import { socials } from '@/mock/socials';
 
 export default function Contact() {
   const t = useTranslations();
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   
   // Debug: Log available translation keys
   useEffect(() => {
     console.log('Contact translations:', t.raw(''));
     console.log('Form title:', t('form.title'));
   }, [t]);
-  
+
+  useEffect(() => {
+    // Load Tally embed script
+    const script = document.createElement('script');
+    script.src = 'https://tally.so/widgets/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+
+    // Construct Tally.so URL with query parameters
+    const tallyUrl = `https://tally.so/r/3qqqj9?name=${encodeURIComponent(name as string)}&email=${encodeURIComponent(email as string)}&message=${encodeURIComponent(message as string)}`;
+
+    // Open Tally.so in new tab or redirect
+    window.location.href = tallyUrl;
+  };
+
   return (
     <section 
       id="contact" 
@@ -35,9 +63,16 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
               {t('contact.form.title')}
             </h3>
+            {/* Hidden Tally.so iframe */}
+            <iframe
+              ref={iframeRef}
+              data-tally-src="https://tally.so/embed/3qqqj9?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              className="hidden"
+              title="Contact Form"
+            />
+            {/* Visible form */}
             <form 
-              action="https://tally.so/r/your-tally-form-id" 
-              method="post"
+              onSubmit={handleSubmit}
               className="space-y-6"
             >
               <div>
