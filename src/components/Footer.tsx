@@ -1,8 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { FiGithub, FiLinkedin, FiInstagram, FiTwitter, FiMail } from 'react-icons/fi';
 import Link from 'next/link';
+import { socials } from '@/mock/socials';
 
 const Footer = () => {
   const t = useTranslations();
@@ -23,24 +23,24 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link href={`/#home`} className="text-gray-400 hover:text-white transition-colors">
+                <a href="#home" className="text-gray-400 hover:text-white transition-colors">
                   {t('footer.home')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href={`/#about`} className="text-gray-400 hover:text-white transition-colors">
+                <a href="#about" className="text-gray-400 hover:text-white transition-colors">
                   {t('footer.about')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href={`/#works`} className="text-gray-400 hover:text-white transition-colors">
+                <a href="#works" className="text-gray-400 hover:text-white transition-colors">
                   {t('footer.works')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href={`/#contact`} className="text-gray-400 hover:text-white transition-colors">
+                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
                   {t('footer.contact')}
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -48,49 +48,21 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.connect')}</h4>
             <div className="flex space-x-4">
-              <a 
-                href="https://github.com/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="GitHub"
-              >
-                <FiGithub size={20} />
-              </a>
-              <a 
-                href="https://linkedin.com/in/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <FiLinkedin size={20} />
-              </a>
-              <a 
-                href="https://instagram.com/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Instagram"
-              >
-                <FiInstagram size={20} />
-              </a>
-              <a 
-                href="https://twitter.com/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Twitter"
-              >
-                <FiTwitter size={20} />
-              </a>
-              <a 
-                href="mailto:your.email@example.com" 
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Email"
-              >
-                <FiMail size={20} />
-              </a>
+              {socials.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a 
+                    key={social.id}
+                    href={social.href}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label={social.ariaLabel}
+                  >
+                    <Icon size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

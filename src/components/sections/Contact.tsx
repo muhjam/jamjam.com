@@ -2,15 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
-import { 
-  FiGithub, 
-  FiLinkedin, 
-  FiInstagram, 
-  FiTwitter,
-  FiMail,
-  FiPhone,
-  FiMapPin
-} from 'react-icons/fi';
+import { FiPhone, FiMapPin } from 'react-icons/fi';
+import { socials } from '@/mock/socials';
 
 export default function Contact() {
   const t = useTranslations();
@@ -97,20 +90,6 @@ export default function Contact() {
                   {t('contact.form.submit')}
                 </button>
               </div>
-              <div className="flex space-x-4 mt-8">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="GitHub">
-                  <FiGithub size={24} />
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="LinkedIn">
-                  <FiLinkedin size={24} />
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="Instagram">
-                  <FiInstagram size={24} />
-                </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="Twitter">
-                  <FiTwitter size={24} />
-                </a>
-              </div>
             </form>
           </div>
           
@@ -124,17 +103,25 @@ export default function Contact() {
               </p>
               
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
-                    <FiMail className="text-blue-600 dark:text-blue-400" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-gray-900 dark:text-white">
-                      {t('contact.email')}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-400">muhhjam@gmail.com</p>
-                  </div>
-                </div>
+                {socials.map((social) => {
+                  if (social.id === 'email') {
+                    const Icon = social.icon;
+                    return (
+                      <div key={social.id} className="flex items-start space-x-4">
+                        <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
+                          <Icon className="text-blue-600 dark:text-blue-400" size={20} />
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-medium text-gray-900 dark:text-white">
+                            {t('contact.email')}
+                          </h4>
+                          <p className="text-gray-600 dark:text-gray-400">{social.href.replace('mailto:', '')}</p>
+                        </div>
+                      </div>
+                    );
+                  }
+                  return null;
+                })}
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
@@ -167,18 +154,21 @@ export default function Contact() {
                 {t('contact.followMe')}
               </h4>
               <div className="flex space-x-4">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="GitHub">
-                  <FiGithub size={24} />
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="LinkedIn">
-                  <FiLinkedin size={24} />
-                </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="Instagram">
-                  <FiInstagram size={24} />
-                </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" aria-label="Twitter">
-                  <FiTwitter size={24} />
-                </a>
+                {socials.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a 
+                      key={social.id}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                      aria-label={social.ariaLabel}
+                    >
+                      <Icon size={24} />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
