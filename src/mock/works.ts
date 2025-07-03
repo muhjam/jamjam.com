@@ -158,5 +158,17 @@ export const works: WorkItem[] = [
     tools: ['Java', 'Python', 'Google Colab'],
     startDate: '2023-05',
     endDate: '2025-06'
+  },
+  {
+    id: '13',
+    title: 'Business Plan Creative & Innovative 2024',
+    description: {
+      en: 'Won a business plan competition at the program level with the theme "Smart Business". The app assists SMEs with reporting, decision-making, contract drafting, and more, all powered by AI.',
+      id: 'Menang lomba bisnis plan di tingkat prodi dengan tema "Bisnis Pintar". Aplikasi ini membantu UMKM dalam pelaporan, pengambilan keputusan, penyusunan kontrak, dan lainnya, semuanya didukung oleh AI.'
+    },
+    image: '/images/business-plan.png',
+    tools: ['Next.js', 'Typescript', 'Tailwind CSS', 'Express.js', 'Open AI'],
+    startDate: '2024-05',
+    endDate: '2024-06'
   }
 ];
