@@ -6,22 +6,42 @@ export const useActiveSection = () => {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: '-80px 0px -80px 0px', // Account for navbar height
       threshold: [0.1, 0.25, 0.5, 0.75, 1], // Multiple thresholds for better detection
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        // Consider a section visible if it's at least 10% visible
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
-          setActiveSection(entry.target.id);
-        }
-      });
+      // Sort entries by their position to prioritize the most visible section
+      const visibleEntries = entries
+        .filter(entry => entry.isIntersecting && entry.intersectionRatio >= 0.1)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visibleEntries.length > 0) {
+        setActiveSection(visibleEntries[0].target.id);
+      }
     }, options);
 
-    // Observe all sections
-    const sections = document.querySelectorAll('section[id]');
-    sections.forEach((section) => observer.observe(section));
+    // Function to start observing sections
+    const startObserving = () => {
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach((section) => observer.observe(section));
+      return sections;
+    };
+
+    // Initial observation
+    let sections = startObserving();
+
+    // If no sections found initially, wait and try again (for dynamic loading)
+    if (sections.length === 0) {
+      const retryTimer = setTimeout(() => {
+        sections = startObserving();
+      }, 100);
+
+      return () => {
+        clearTimeout(retryTimer);
+        sections.forEach((section) => observer.unobserve(section));
+      };
+    }
 
     // Cleanup
     return () => {

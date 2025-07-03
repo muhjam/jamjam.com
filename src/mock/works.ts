@@ -88,6 +88,18 @@ export const works: WorkItem[] = [
   },
   {
     id: '7',
+    title: 'Speakers at SMKDEV',
+    description: {
+      en: 'Title: "Mastering AI Prompts to Become a Skilled Prompt Engineer!" Delivered a talk at SMKDEV on the role and functions of a prompt engineer. Provided insights into the application of prompt engineering in AI projects and its impact on improving AI model performance.',
+      id: 'Judul: "Mastering AI Prompts to Become a Skilled Prompt Engineer!" Berbicara di SMKDEV tentang peran dan fungsi seorang prompt engineer. Memberikan wawasan tentang penerapan rekayasa prompt dalam proyek AI dan dampaknya dalam meningkatkan kinerja model AI.'
+    },
+    image: '/images/smkdev.png',
+    tools: [],
+    startDate: '2024-04',
+    endDate: '2025-06'
+  },
+  {
+    id: '8',
     title: 'Anarag Japan',
     description: {
       en: 'Built a document-aware AI chatbot using Next.js, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
@@ -99,7 +111,7 @@ export const works: WorkItem[] = [
     endDate: '2025-01'
   },
   {
-    id: '8',
+    id: '9',
     title: 'Alola Singapore',
     description: {
       en: 'Developed a travel booking platform with chatbot-based customer service. Built a responsive interface using Next.js and Tailwind CSS. Enhanced user experience with real-time interactions and seamless navigation.',
@@ -112,7 +124,7 @@ export const works: WorkItem[] = [
     link: 'https://alola.com'
   },
   {
-    id: '9',
+    id: '10',
     title: 'Organization IOM ITB',
     description: {
       en: 'Built a donation platform for ITB alumni using Vue.js, Express.js, and Tailwind CSS. Designed a responsive user interface and streamlined the donation workflow. Enabled secure transactions and an admin dashboard for contribution tracking.',
@@ -124,7 +136,7 @@ export const works: WorkItem[] = [
     endDate: '2025-05'
   },
   {
-    id: '10',
+    id: '11',
     title: 'Devcode',
     description: {
       en: 'Built a coding challenge and job search platform using React.js, Next.js, Vue.js, and Node.js. Trained AI models to automatically generate coding problems and evaluate solutions. Accelerated candidate evaluation with real-time code execution and ranking systems.',
@@ -136,7 +148,7 @@ export const works: WorkItem[] = [
     endDate: '2025-01'
   },
   {
-    id: '11',
+    id: '12',
     title: 'Lecturer Assistant',
     description: {
       en: 'Taught computer science students about algorithms and programming using Java. Instructed students in machine learning using Google Colab with Python.',

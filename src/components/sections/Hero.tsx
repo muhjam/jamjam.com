@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900"
+      className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center">
