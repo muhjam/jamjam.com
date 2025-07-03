@@ -66,12 +66,11 @@ export default function Contact() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+          <div className='bg-white rounded-[6px] px-2 pt-4'>
+            <h3 className="text-2xl font-semibold text-gray-900">
               {t('contact.form.title')}
             </h3>
             {/* Tally.so iframe */}
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
               <iframe
                 ref={tallyIframeRef}
                 src="https://tally.so/embed/3qqqj9?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1&backgroundColor=%23F3F4F6&buttonFullWidth=1"
@@ -83,7 +82,6 @@ export default function Contact() {
                 title="Contact Form"
                 className="rounded-lg"
               ></iframe>
-            </div>
           </div>
           
           <div className="space-y-8">
