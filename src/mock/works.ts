@@ -60,7 +60,8 @@ export const works: WorkItem[] = [
     image: '/images/conference.png',
     tools: ['Next.js', 'Javascript', 'Tailwind CSS', 'Open AI'],
     startDate: '2025-05',
-    endDate: '2025-08'
+    endDate: '2025-08',
+    link: '/files/★ICFICE+2025+Proceedings.pdf'
   },
   {
     id: '5',
