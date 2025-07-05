@@ -28,28 +28,28 @@
     },
     "4": {
       "title": "AI Reservation Japan",
-      "description": "Built a dashboard and user pages for restaurant call reservations. Integrated an AI-powered voice assistant to handle customer calls. Developed using Next.js, TypeScript, and Tailwind CSS.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+      "description": "Built a dashboard and user pages for restaurant call reservations. Integrated an AI-powered voice assistant to handle customer calls. Developed using Next.js, Typescript, and Tailwind CSS.",
+      "tags": ["Next.js", "Typescript", "Tailwind CSS"]
     },
     "5": {
       "title": "SHIGYOcloud Japan",
-      "description": "Developed a document-aware AI chatbot using Next.js, NestJS, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "NestJS", "RAGFlow"]
+      "description": "Developed a document-aware AI chatbot using Next.js, NestJS, RAGFlow, and Typescript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.",
+      "tags": ["Next.js", "Typescript", "Tailwind CSS", "NestJS", "RAGFlow"]
     },
     "6": {
       "title": "Anarag Japan",
-      "description": "Built a document-aware AI chatbot using Next.js, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "RAGFlow"]
+      "description": "Built a document-aware AI chatbot using Next.js, RAGFlow, and Typescript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.",
+      "tags": ["Next.js", "Typescript", "Tailwind CSS", "RAGFlow"]
     },
     "7": {
       "title": "Alola Singapore",
       "description": "Developed a travel booking platform with chatbot-based customer service. Built a responsive interface using Next.js and Tailwind CSS. Enhanced user experience with real-time interactions and seamless navigation.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+      "tags": ["Next.js", "Typescript", "Tailwind CSS"]
     },
     "8": {
       "title": "Organization IOM ITB",
       "description": "Built a donation platform for ITB alumni using Vue.js, Express.js, and Tailwind CSS. Designed a responsive user interface and streamlined the donation workflow. Enabled secure transactions and an admin dashboard for contribution tracking.",
-      "tags": ["Vue.js", "TypeScript", "Express.js", "Tailwind CSS"]
+      "tags": ["Vue.js", "Typescript", "Express.js", "Tailwind CSS"]
     },
     "9": {
       "title": "Devcode",

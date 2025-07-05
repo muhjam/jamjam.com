@@ -48,7 +48,7 @@ export default function About() {
               </h3>
               <div className="space-y-3">
                 {[
-                  'Cursor', 'Windsurf', 'Trae AI', 'RAGFlow', 'Dify', 'Next.js', 'Vue.js', 'Laravel', 'TypeScript', 'Python', 'Node.js', 
+                  'Cursor', 'Windsurf', 'Trae AI', 'RAGFlow', 'Dify', 'Next.js', 'Vue.js', 'Laravel', 'Typescript', 'Python', 'Node.js', 
                   'Tailwind CSS', 'Docker'
                 ].map((skill) => (
                   <div key={skill} className="flex items-center">

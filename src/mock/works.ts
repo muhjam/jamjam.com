@@ -66,11 +66,11 @@ export const works: WorkItem[] = [
     id: '5',
     title: 'AI Reservation Japan',
     description: {
-      en: 'Built a dashboard and user pages for restaurant call reservations. Integrated an AI-powered voice assistant to handle customer calls. Developed using Next.js, TypeScript, and Tailwind CSS.',
-      id: 'Membangun dasbor dan halaman pengguna untuk reservasi panggilan restoran. Mengintegrasikan asisten suara bertenaga AI untuk menangani panggilan pelanggan. Dikembangkan menggunakan Next.js, TypeScript, dan Tailwind CSS.'
+      en: 'Built a dashboard and user pages for restaurant call reservations. Integrated an AI-powered voice assistant to handle customer calls. Developed using Next.js, Typescript, and Tailwind CSS.',
+      id: 'Membangun dasbor dan halaman pengguna untuk reservasi panggilan restoran. Mengintegrasikan asisten suara bertenaga AI untuk menangani panggilan pelanggan. Dikembangkan menggunakan Next.js, Typescript, dan Tailwind CSS.'
     },
     image: '/images/project1.jpg',
-    tools: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    tools: ['Next.js', 'Typescript', 'Tailwind CSS'],
     startDate: '2025-04',
     endDate: '2025-06'
   },
@@ -78,11 +78,11 @@ export const works: WorkItem[] = [
     id: '6',
     title: 'SHIGYOcloud Japan',
     description: {
-      en: 'Developed a document-aware AI chatbot using Next.js, NestJS, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
-      id: 'Membangun chatbot AI yang sadar dokumen menggunakan Next.js, NestJS, RAGFlow, dan TypeScript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.'
+      en: 'Developed a document-aware AI chatbot using Next.js, NestJS, RAGFlow, and Typescript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
+      id: 'Membangun chatbot AI yang sadar dokumen menggunakan Next.js, NestJS, RAGFlow, dan Typescript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.'
     },
     image: '/images/shigyocloud.png',
-    tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'NestJS', 'RAGFlow'],
+    tools: ['Next.js', 'Typescript', 'Tailwind CSS', 'NestJS', 'RAGFlow'],
     startDate: '2025-01',
     endDate: '2025-06'
   },
@@ -102,11 +102,11 @@ export const works: WorkItem[] = [
     id: '8',
     title: 'Anarag Japan',
     description: {
-      en: 'Built a document-aware AI chatbot using Next.js, RAGFlow, and TypeScript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
-      id: 'Membangun chatbot AI yang sadar dokumen menggunakan Next.js, RAGFlow, dan TypeScript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.'
+      en: 'Built a document-aware AI chatbot using Next.js, RAGFlow, and Typescript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
+      id: 'Membangun chatbot AI yang sadar dokumen menggunakan Next.js, RAGFlow, dan Typescript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.'
     },
     image: '/images/anarag.png',
-    tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'RAGFlow'],
+    tools: ['Next.js', 'Typescript', 'Tailwind CSS', 'RAGFlow'],
     startDate: '2024-09',
     endDate: '2025-01'
   },
@@ -118,7 +118,7 @@ export const works: WorkItem[] = [
       id: 'Mengembangkan platform pemesanan perjalanan dengan layanan pelanggan berbasis chatbot. Membangun antarmuka responsif menggunakan Next.js dan Tailwind CSS. Meningkatkan pengalaman pengguna dengan interaksi waktu nyata dan navigasi yang mulus.'
     },
     image: '/images/alola.png',
-    tools: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    tools: ['Next.js', 'Typescript', 'Tailwind CSS'],
     startDate: '2024-07',
     endDate: '2025-01',
     link: 'https://alola.com'
@@ -131,7 +131,7 @@ export const works: WorkItem[] = [
       id: 'Membangun platform donasi untuk alumni ITB menggunakan Vue.js, Express.js, dan Tailwind CSS. Merancang antarmuka pengguna yang responsif dan menyederhanakan alur kerja donasi. Memungkinkan transaksi yang aman dan dasbor admin untuk pelacakan kontribusi.'
     },
     image: '/images/iom.png',
-    tools: ['Vue.js', 'TypeScript', 'Express.js', 'Tailwind CSS'],
+    tools: ['Vue.js', 'Typescript', 'Express.js', 'Tailwind CSS'],
     startDate: '2024-06',
     endDate: '2025-05'
   },

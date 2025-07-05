@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'Vue.js',
       'Laravel',
       'Python',
-      'TypeScript',
+      'Typescript',
       'Web Development',
       'AI Integration',
       'Portfolio'

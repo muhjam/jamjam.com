@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Vue.js",
     "Laravel",
     "Python",
-    "TypeScript",
+    "Typescript",
     "Node.js",
     "Tailwind CSS",
     "Docker",

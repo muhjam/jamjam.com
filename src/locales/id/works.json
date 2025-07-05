@@ -28,28 +28,28 @@
     },
     "4": {
       "title": "AI Reservation Japan",
-      "description": "Membangun dasbor dan halaman pengguna untuk reservasi panggilan restoran. Mengintegrasikan asisten suara bertenaga AI untuk menangani panggilan pelanggan. Dikembangkan menggunakan Next.js, TypeScript, dan Tailwind CSS.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+      "description": "Membangun dasbor dan halaman pengguna untuk reservasi panggilan restoran. Mengintegrasikan asisten suara bertenaga AI untuk menangani panggilan pelanggan. Dikembangkan menggunakan Next.js, Typescript, dan Tailwind CSS.",
+      "tags": ["Next.js", "Typescript", "Tailwind CSS"]
     },
     "5": {
       "title": "SHIGYOcloud Japan",
-      "description": "Membangun chatbot AI yang sadar dokumen menggunakan Next.js, NestJS, RAGFlow, dan TypeScript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "NestJS", "RAGFlow"]
+      "description": "Membangun chatbot AI yang sadar dokumen menggunakan Next.js, NestJS, RAGFlow, dan Typescript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.",
+      "tags": ["Next.js", "Typescript", "Tailwind CSS", "NestJS", "RAGFlow"]
     },
     "6": {
       "title": "Anarag Japan",
-      "description": "Membangun chatbot AI yang sadar dokumen menggunakan Next.js, RAGFlow, dan TypeScript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS", "RAGFlow"]
+      "description": "Membangun chatbot AI yang sadar dokumen menggunakan Next.js, RAGFlow, dan Typescript. Memungkinkan unggahan file multi-format (PDF, DOCX, TXT) sebagai sumber pengetahuan dinamis. Mengintegrasikan pencarian web waktu nyata untuk memperkaya respons chatbot dengan data eksternal.",
+      "tags": ["Next.js", "Typescript", "Tailwind CSS", "RAGFlow"]
     },
     "7": {
       "title": "Alola Singapore",
       "description": "Mengembangkan platform pemesanan perjalanan dengan layanan pelanggan berbasis chatbot. Membangun antarmuka responsif menggunakan Next.js dan Tailwind CSS. Meningkatkan pengalaman pengguna dengan interaksi waktu nyata dan navigasi yang mulus.",
-      "tags": ["Next.js", "TypeScript", "Tailwind CSS"]
+      "tags": ["Next.js", "Typescript", "Tailwind CSS"]
     },
     "8": {
       "title": "Organization IOM ITB",
       "description": "Membangun platform donasi untuk alumni ITB menggunakan Vue.js, Express.js, dan Tailwind CSS. Merancang antarmuka pengguna yang responsif dan menyederhanakan alur kerja donasi. Memungkinkan transaksi yang aman dan dasbor admin untuk pelacakan kontribusi.",
-      "tags": ["Vue.js", "TypeScript", "Express.js", "Tailwind CSS"]
+      "tags": ["Vue.js", "Typescript", "Express.js", "Tailwind CSS"]
     },
     "9": {
       "title": "Devcode",
