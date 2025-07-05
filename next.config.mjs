@@ -11,6 +11,24 @@ const nextConfig = {
       },
     ],
   },
+  // Configure headers for PDF files
+  async headers() {
+    return [
+      {
+        source: '/files/:path*',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/pdf',
+          },
+          {
+            key: 'Content-Disposition',
+            value: 'inline',
+          },
+        ],
+      },
+    ];
+  },
   // Remove the old i18n configuration as it's not compatible with App Router
   // i18n handling is now done through the routing system
 };
