@@ -97,7 +97,8 @@ export const works: WorkItem[] = [
     image: '/images/smkdev.png',
     tools: [],
     startDate: '2024-04',
-    endDate: '2025-06'
+    endDate: '2025-06',
+    link: 'https://www.smk.dev/expert-class/mastering-ai-prompts-to-become-a-skilled-prompt-engineer'
   },
   {
     id: '8',
@@ -134,7 +135,8 @@ export const works: WorkItem[] = [
     image: '/images/iom.png',
     tools: ['Vue.js', 'Typescript', 'Express.js', 'Tailwind CSS'],
     startDate: '2024-06',
-    endDate: '2025-05'
+    endDate: '2025-05',
+    link: 'https://iom-itb.id'
   },
   {
     id: '11',
@@ -146,7 +148,8 @@ export const works: WorkItem[] = [
     image: '/images/devcode.png',
     tools: ['React.js', 'Next.js', 'Vue.js', 'Node.js', 'Open AI'],
     startDate: '2023-08',
-    endDate: '2025-01'
+    endDate: '2025-01',
+    link: 'https://instagram.com/devcode.ai'
   },
   {
     id: '12',
