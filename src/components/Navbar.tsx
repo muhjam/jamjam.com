@@ -6,7 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useActiveSection } from '@/hooks/useActiveSection';
-import { getNavbarHeight } from '@/utils/sectionUtils';
+import { getNavbarHeight, getSectionFirstContainerPosition } from '@/utils/sectionUtils';
 
 const Navbar = () => {
   const locale = useLocale();
@@ -22,28 +22,57 @@ const Navbar = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.split('#')[1];
+    const wasMenuOpen = isOpen;
+    
+    // Close mobile menu if open
+    setIsOpen(false);
+    
     if (!targetId) {
-      // If no hash (home), scroll to top smoothly
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
-    } else {
-      // For other sections, scroll to the section dengan offset dinamis
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        const navbarHeight = getNavbarHeight();
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - navbarHeight - 20; // Tambahkan buffer 20px
+      return;
+    }
+    
+    // Fungsi untuk melakukan scroll
+    const performScroll = () => {
+      // Dapatkan tinggi navbar yang benar (setelah menu tertutup)
+      const navbarHeight = getNavbarHeight();
+      const containerPosition = getSectionFirstContainerPosition(targetId);
+      
+      if (containerPosition !== null) {
+        const offsetPosition = containerPosition + window.scrollY - navbarHeight;
         
         window.scrollTo({
-          top: offsetPosition,
+          top: Math.max(0, offsetPosition),
           behavior: 'smooth'
         });
+      } else {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - navbarHeight;
+          
+          window.scrollTo({
+            top: Math.max(0, offsetPosition),
+            behavior: 'smooth'
+          });
+        }
       }
+    };
+    
+    // Jika menu mobile terbuka, tunggu menu tertutup dulu
+    if (wasMenuOpen) {
+      // RequestAnimationFrame untuk memastikan DOM sudah update
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          performScroll();
+        });
+      });
+    } else {
+      performScroll();
     }
-    // Close mobile menu if open
-    setIsOpen(false);
   };
 
   if (!mounted) return null;

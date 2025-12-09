@@ -1,26 +1,12 @@
-/**
- * Utility functions untuk mendapatkan koordinat section secara dinamis
- * Menyesuaikan dengan berbagai ukuran layar dan tinggi navbar
- */
-
-/**
- * Mendapatkan tinggi navbar secara dinamis
- * @returns Tinggi navbar dalam pixel
- */
 export const getNavbarHeight = (): number => {
-  if (typeof window === 'undefined') return 64; // Default height untuk SSR
+  if (typeof window === 'undefined') return 64;
   
   const navbar = document.querySelector('header');
-  if (!navbar) return 64; // Default height jika navbar tidak ditemukan
+  if (!navbar) return 64;
   
   return navbar.offsetHeight;
 };
 
-/**
- * Mendapatkan koordinat top dari sebuah section secara dinamis
- * @param sectionId - ID dari section yang ingin diukur
- * @returns Koordinat top dari section relatif terhadap viewport, atau null jika tidak ditemukan
- */
 export const getSectionTopPosition = (sectionId: string): number | null => {
   if (typeof window === 'undefined') return null;
   
@@ -31,10 +17,61 @@ export const getSectionTopPosition = (sectionId: string): number | null => {
   return rect.top;
 };
 
-/**
- * Mendapatkan semua section yang ada di halaman beserta koordinatnya
- * @returns Array of objects dengan id dan koordinat top dari setiap section
- */
+export const getSectionFirstContainerPosition = (sectionId: string): number | null => {
+  if (typeof window === 'undefined') return null;
+  
+  const section = document.getElementById(sectionId);
+  if (!section) return null;
+  
+  // Prioritas: cari div yang berisi heading (h1, h2, h3) karena itu adalah "first container" yang user lihat
+  let container: HTMLElement | null = null;
+  
+  // 1. Cari div yang berisi heading pertama (h1, h2, atau h3)
+  // Biasanya div dengan class "text-center" yang langsung berisi title
+  const headings = section.querySelectorAll('h1, h2, h3');
+  if (headings.length > 0) {
+    const firstHeading = headings[0];
+    // Gunakan parent div langsung dari heading (biasanya div dengan class text-center)
+    if (firstHeading.parentElement && firstHeading.parentElement.tagName === 'DIV') {
+      container = firstHeading.parentElement;
+    }
+  }
+  
+  // 2. Jika tidak ada heading, cari div dengan class "container"
+  if (!container) {
+    container = section.querySelector('.container') as HTMLElement;
+  }
+  
+  // 3. Jika tidak ada, cari div dengan class yang mengandung "max-w-"
+  if (!container) {
+    const allDivs = section.querySelectorAll('div');
+    for (const div of Array.from(allDivs)) {
+      if (div.classList.toString().includes('max-w-')) {
+        container = div;
+        break;
+      }
+    }
+  }
+  
+  // 4. Jika masih tidak ada, gunakan div pertama langsung di dalam section
+  if (!container) {
+    const firstChild = section.firstElementChild;
+    if (firstChild && firstChild instanceof HTMLElement && firstChild.tagName === 'DIV') {
+      container = firstChild;
+    }
+  }
+  
+  if (container) {
+    const rect = container.getBoundingClientRect();
+    return rect.top;
+  }
+  
+  // Fallback: gunakan posisi section
+  const rect = section.getBoundingClientRect();
+  return rect.top;
+};
+
+
 export const getAllSectionsWithPositions = (): Array<{ id: string; top: number }> => {
   if (typeof window === 'undefined') return [];
   
@@ -55,11 +92,6 @@ export const getAllSectionsWithPositions = (): Array<{ id: string; top: number }
   return sectionsWithPositions.sort((a, b) => a.top - b.top);
 };
 
-/**
- * Mendapatkan section yang sedang aktif berdasarkan posisi scroll
- * @param navbarHeight - Tinggi navbar untuk offset
- * @returns ID dari section yang sedang aktif, atau 'home' jika tidak ada
- */
 export const getActiveSectionByScroll = (navbarHeight: number = 64): string => {
   if (typeof window === 'undefined') return 'home';
   
@@ -81,7 +113,6 @@ export const getActiveSectionByScroll = (navbarHeight: number = 64): string => {
     const rect = section.getBoundingClientRect();
     const sectionTopViewport = rect.top;
     
-    // Jika section sudah melewati navbar (top sudah di atas atau di bawah navbar)
     if (sectionTopViewport <= viewportThreshold) {
       const distance = Math.abs(sectionTopViewport - navbarHeight);
       matches.push({
@@ -92,7 +123,6 @@ export const getActiveSectionByScroll = (navbarHeight: number = 64): string => {
     }
   });
   
-  // Pilih section dengan distance terkecil
   if (matches.length > 0) {
     const bestMatch = matches.reduce((prev, current) => 
       current.distance < prev.distance ? current : prev
@@ -100,7 +130,6 @@ export const getActiveSectionByScroll = (navbarHeight: number = 64): string => {
     return bestMatch.id === 'home' ? 'home' : bestMatch.id;
   }
   
-  // Jika tidak ada section yang melewati navbar, cek apakah kita di hero/home section
   const homeSection = document.getElementById('home');
   if (homeSection) {
     const homeRect = homeSection.getBoundingClientRect();
