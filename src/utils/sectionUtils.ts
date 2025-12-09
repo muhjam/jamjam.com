@@ -64,53 +64,51 @@ export const getActiveSectionByScroll = (navbarHeight: number = 64): string => {
   if (typeof window === 'undefined') return 'home';
   
   const sections = document.querySelectorAll('section[id]');
-  const scrollPosition = window.scrollY;
   const viewportThreshold = navbarHeight + 100; // Threshold untuk menentukan section aktif
   
-  let activeSection = 'home';
-  let bestMatch: { id: string; distance: number; top: number } | null = null;
+  interface SectionMatch {
+    id: string;
+    distance: number;
+    top: number;
+  }
+  
+  const matches: SectionMatch[] = [];
   
   sections.forEach((section) => {
     const id = section.id;
     if (!id) return;
     
     const rect = section.getBoundingClientRect();
-    const sectionTop = rect.top + scrollPosition;
-    const sectionBottom = sectionTop + rect.height;
     const sectionTopViewport = rect.top;
     
     // Jika section sudah melewati navbar (top sudah di atas atau di bawah navbar)
     if (sectionTopViewport <= viewportThreshold) {
       const distance = Math.abs(sectionTopViewport - navbarHeight);
-      
-      // Pilih section yang:
-      // 1. Sudah melewati navbar
-      // 2. Paling dekat dengan posisi navbar
-      // 3. Masih terlihat di viewport (atau baru saja melewati)
-      if (!bestMatch || distance < bestMatch.distance) {
-        bestMatch = {
-          id,
-          distance,
-          top: sectionTopViewport
-        };
-      }
+      matches.push({
+        id,
+        distance,
+        top: sectionTopViewport
+      });
     }
   });
   
-  if (bestMatch) {
-    activeSection = bestMatch.id;
-  } else {
-    // Jika tidak ada section yang melewati navbar, cek apakah kita di hero/home section
-    const homeSection = document.getElementById('home');
-    if (homeSection) {
-      const homeRect = homeSection.getBoundingClientRect();
-      if (homeRect.top >= 0 && homeRect.bottom > navbarHeight) {
-        activeSection = 'home';
-      }
+  // Pilih section dengan distance terkecil
+  if (matches.length > 0) {
+    const bestMatch = matches.reduce((prev, current) => 
+      current.distance < prev.distance ? current : prev
+    );
+    return bestMatch.id === 'home' ? 'home' : bestMatch.id;
+  }
+  
+  // Jika tidak ada section yang melewati navbar, cek apakah kita di hero/home section
+  const homeSection = document.getElementById('home');
+  if (homeSection) {
+    const homeRect = homeSection.getBoundingClientRect();
+    if (homeRect.top >= 0 && homeRect.bottom > navbarHeight) {
+      return 'home';
     }
   }
   
-  // Map 'home' ID ke 'home' untuk konsistensi
-  return activeSection === 'home' ? 'home' : activeSection;
+  return 'home';
 };
 
