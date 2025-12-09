@@ -24,7 +24,7 @@ export const works: WorkItem[] = [
     tools: ['Next.js', 'Javascript', 'Tailwind CSS', 'Google Sheets', 'Google Drive'],
     startDate: '2025-10',
     endDate: '2025-11',
-    link: 'https://tugas-akhir.jamjam.my.id'
+    link: 'https://wisuda.jamjam.my.id'
   },
   {
     id: '13',
