@@ -14,23 +14,37 @@ export interface WorkItem {
 
 export const works: WorkItem[] = [
   {
-    id: '1',
+    id: '14',
+    title: 'Graduation Project',
+    description: {
+      en: "I built an online graduation invitation website that also showcased memories and photos from my university life. The site stored guest info and posts in a spreadsheet, with photos on Google Drive, all displayed automatically. It was a simple but meaningful project that let me experiment with sharing and web technology.",
+      id: "Saya membuat undangan kelulusan online yang juga menampilkan foto dan kenangan masa kuliah. Seluruh data tamu dan postingan disimpan di spreadsheet, foto diunggah ke Google Drive, lalu semuanya tampil otomatis di website. Proyek ini sederhana tapi bermakna dan jadi ajang eksperimen teknologi."
+    },
+    image: '/images/graduation.png',
+    tools: ['Next.js', 'Javascript', 'Tailwind CSS', 'Google Sheets', 'Google Drive'],
+    startDate: '2025-10',
+    endDate: '2025-11',
+    link: 'https://tugas-akhir.jamjam.my.id'
+  },
+  {
+    id: '13',
     title: 'Anarise Japan',
     description: {
       en: 'Building a coding challenge and job search platform using React.js, Next.js, Vue.js, and Node.js. Training AI models to automatically generate coding problems and evaluate solutions. Accelerating candidate evaluation with real-time code execution and ranking systems.',
       id: 'Membangun platform tantangan coding dan pencarian kerja dengan React.js, Next.js, Vue.js, dan Node.js. Melatih model AI untuk menghasilkan masalah coding secara otomatis dan menilai solusi. Mempercepat evaluasi kandidat dengan eksekusi kode waktu nyata dan sistem peringkat.'
     },
-    image: '/images/project1.jpg',
-    tools: ['React.js', 'Next.js', 'Vue.js', 'Node.js', 'Open AI'],
+    image: '/images/anarise.png',
+    tools: ['React.js', 'Next.js', 'Vue.js', 'Node.js', 'Open AI', 'Untitled UI'],
     startDate: '2025-06',
-    endDate: 'Present'
+    endDate: '2025-11',
+    link: 'https://anarise-ai.com'
   },
   {
     id: '2',
     title: 'Final Project',
     description: {
-      en: 'Final project for graduation in engineering at Universitas Pasundan, titled "Automation of High School Mathematics Problem Creation Using Open AI GPT-4o". If you want to try logging in as NUPTK:"213040057" PW:"Jamjam123".',
-      id: 'Proyek akhir untuk kelulusan sarjana teknik di Universitas Pasundan, dengan judul "Otomatisasi Pembuatan Soal Matematika Tingkat SMA Menggunakan Teknologi Open AI GPT-4o". Jika anda mau coba login sebagai NUPTK:"213040057" PW:"Jamjam123".'
+      en: 'Final project for graduation in engineering at Universitas Pasundan, titled "Automation of High School Mathematics Problem Creation Using Open AI GPT-4o".',
+      id: 'Proyek akhir untuk kelulusan sarjana teknik di Universitas Pasundan, dengan judul "Otomatisasi Pembuatan Soal Matematika Tingkat SMA Menggunakan Teknologi Open AI GPT-4o".'
     },
     image: '/images/final-project.png',
     tools: ['Next.js', 'Javascript', 'Tailwind CSS', 'Open AI'],
@@ -39,7 +53,7 @@ export const works: WorkItem[] = [
     link: 'https://tugas-akhir.jamjam.my.id'
   },
   {
-    id: '3',
+    id: '12',
     title: 'Journal International',
     description: {
       en: 'Researcher at Universitas Pasundan and Changwon University. Published research articles on AI in education, focusing on automated test creation aligned with the national curriculum. Lead author of: Automation of Indonesian High School Mathematics Assessment Generation Using OpenAI GPT-4o. Contributed to prompt engineering, model evaluation, and data-driven exam design.',
@@ -51,7 +65,7 @@ export const works: WorkItem[] = [
     endDate: '2025-08'
   },
   {
-    id: '4',
+    id: '11',
     title: 'Conference International - KIICE 2025',
     description: {
       en: 'Presented at the KIICE Conference (Korea Institute of Intelligent Computing and Engineering) on AI in education. Co-authored paper: Empowering Education with AI: Generating Indonesian High School Mathematics Exams Using ChatGPT 4.0. Collaborated across institutions in applying NLP and prompt engineering for educational assessment.',
@@ -64,7 +78,7 @@ export const works: WorkItem[] = [
     link: 'https://kiice.org/file/download/9213?view=1'
   },
   {
-    id: '5',
+    id: '10',
     title: 'AI Reservation Japan',
     description: {
       en: 'Built a dashboard and user pages for restaurant call reservations. Integrated an AI-powered voice assistant to handle customer calls. Developed using Next.js, Typescript, and Tailwind CSS.',
@@ -76,7 +90,7 @@ export const works: WorkItem[] = [
     endDate: '2025-06'
   },
   {
-    id: '6',
+    id: '9',
     title: 'SHIGYOcloud Japan',
     description: {
       en: 'Developed a document-aware AI chatbot using Next.js, NestJS, RAGFlow, and Typescript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
@@ -88,7 +102,7 @@ export const works: WorkItem[] = [
     endDate: '2025-06'
   },
   {
-    id: '7',
+    id: '8',
     title: 'Speakers at SMKDEV',
     description: {
       en: 'Title: "Mastering AI Prompts to Become a Skilled Prompt Engineer!" Delivered a talk at SMKDEV on the role and functions of a prompt engineer. Provided insights into the application of prompt engineering in AI projects and its impact on improving AI model performance.',
@@ -101,7 +115,7 @@ export const works: WorkItem[] = [
     link: 'https://www.smk.dev/expert-class/mastering-ai-prompts-to-become-a-skilled-prompt-engineer'
   },
   {
-    id: '8',
+    id: '6',
     title: 'Anarag Japan',
     description: {
       en: 'Built a document-aware AI chatbot using Next.js, RAGFlow, and Typescript. Enabled multi-format file uploads (PDF, DOCX, TXT) as dynamic knowledge sources. Integrated real-time web search to enrich chatbot responses with external data.',
@@ -113,7 +127,7 @@ export const works: WorkItem[] = [
     endDate: '2025-01'
   },
   {
-    id: '9',
+    id: '5',
     title: 'Alola Singapore',
     description: {
       en: 'Developed a travel booking platform with chatbot-based customer service. Built a responsive interface using Next.js and Tailwind CSS. Enhanced user experience with real-time interactions and seamless navigation.',
@@ -126,7 +140,7 @@ export const works: WorkItem[] = [
     link: 'https://alola.com'
   },
   {
-    id: '10',
+    id: '4',
     title: 'Organization IOM ITB',
     description: {
       en: 'Built a donation platform for ITB alumni using Vue.js, Express.js, and Tailwind CSS. Designed a responsive user interface and streamlined the donation workflow. Enabled secure transactions and an admin dashboard for contribution tracking.',
@@ -139,7 +153,7 @@ export const works: WorkItem[] = [
     link: 'https://iom-itb.id'
   },
   {
-    id: '11',
+    id: '3',
     title: 'Devcode',
     description: {
       en: 'Built a coding challenge and job search platform using React.js, Next.js, Vue.js, and Node.js. Trained AI models to automatically generate coding problems and evaluate solutions. Accelerated candidate evaluation with real-time code execution and ranking systems.',
@@ -152,7 +166,7 @@ export const works: WorkItem[] = [
     link: 'https://instagram.com/devcode.ai'
   },
   {
-    id: '12',
+    id: '2',
     title: 'Lecturer Assistant',
     description: {
       en: 'Taught computer science students about algorithms and programming using Java. Instructed students in machine learning using Google Colab with Python.',
@@ -164,7 +178,7 @@ export const works: WorkItem[] = [
     endDate: '2025-06'
   },
   {
-    id: '13',
+    id: '1',
     title: 'Business Plan Creative & Innovative 2024',
     description: {
       en: 'Won a business plan competition at the program level with the theme "Smart Business". The app assists SMEs with reporting, decision-making, contract drafting, and more, all powered by AI.',

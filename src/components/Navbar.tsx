@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useActiveSection } from '@/hooks/useActiveSection';
+import { getNavbarHeight } from '@/utils/sectionUtils';
 
 const Navbar = () => {
   const locale = useLocale();
@@ -28,10 +29,15 @@ const Navbar = () => {
         behavior: 'smooth'
       });
     } else {
-      // For other sections, scroll to the section
+      // For other sections, scroll to the section dengan offset dinamis
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        targetElement.scrollIntoView({
+        const navbarHeight = getNavbarHeight();
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - navbarHeight - 20; // Tambahkan buffer 20px
+        
+        window.scrollTo({
+          top: offsetPosition,
           behavior: 'smooth'
         });
       }
