@@ -74,4 +74,4 @@ export default function ThemeToggle() {
       {isDark ? <BsSun size={20} /> : <BsMoon size={20} />}
     </button>
   );
-} 
+}

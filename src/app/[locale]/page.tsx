@@ -11,28 +11,32 @@ const locales: Locale[] = ['en', 'id'];
 
 
 // Dynamically import components with loading fallback
-const Navbar = dynamic(() => import('@/components/Navbar'), { 
+const Navbar = dynamic(() => import('@/components/navbar'), { 
   loading: () => <div className="h-16 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm" />,
   ssr: false 
 });
 
-const Hero = dynamic(() => import('@/components/sections/Hero'), { 
+const WhatsAppButton = dynamic(() => import('@/components/whatsapp-button'), { 
   ssr: false 
 });
 
-const About = dynamic(() => import('@/components/sections/About'), { 
+const Hero = dynamic(() => import('@/components/sections/hero'), { 
   ssr: false 
 });
 
-const Works = dynamic(() => import('@/components/sections/Works'), { 
+const About = dynamic(() => import('@/components/sections/about'), { 
   ssr: false 
 });
 
-const Contact = dynamic(() => import('@/components/sections/Contact'), { 
+const Works = dynamic(() => import('@/components/sections/works'), { 
   ssr: false 
 });
 
-const Footer = dynamic(() => import('@/components/Footer'), { 
+const Contact = dynamic(() => import('@/components/sections/contact'), { 
+  ssr: false 
+});
+
+const Footer = dynamic(() => import('@/components/footer'), { 
   loading: () => <div className="h-12 bg-gray-900" />,
   ssr: false 
 });
@@ -64,6 +68,7 @@ function PageContent() {
         </Suspense>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

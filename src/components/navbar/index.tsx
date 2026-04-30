@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useTranslations, useLocale } from 'next-intl';
-import ThemeToggle from './ThemeToggle';
-import LanguageSwitcher from './LanguageSwitcher';
+import Image from 'next/image';
+import ThemeToggle from '../theme-toggle';
+import LanguageSwitcher from '../language-switcher';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { getNavbarHeight, getSectionFirstContainerPosition } from '@/utils/sectionUtils';
+import logo from '@/app/og-image.png';
 
 const Navbar = () => {
   const locale = useLocale();
@@ -96,9 +98,16 @@ const Navbar = () => {
           <a
             href={`/${locale}`}
             onClick={(e) => handleNavClick(e, `/${locale}`)}
-            className="text-xl font-bold text-gray-900 dark:text-white"
+            className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2"
           >
-            {t('common.portfolio')}
+            <Image 
+              src={logo} 
+              alt="Jamjam Logo" 
+              width={32} 
+              height={32} 
+              className="rounded-full shadow-sm"
+            />
+            <span>{t('common.portfolio')}</span>
           </a>
 
           {/* Desktop */}

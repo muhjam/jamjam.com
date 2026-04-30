@@ -31,7 +31,7 @@ declare global {
 export default function Contact() {
   const t = useTranslations();
   const tallyIframeRef = useRef<HTMLIFrameElement>(null);
-  
+
   // Debug: Log available translation keys
   useEffect(() => {
     console.log('Contact translations:', t.raw(''));
@@ -50,8 +50,8 @@ export default function Contact() {
   }, []);
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       className="py-20 bg-white dark:bg-gray-900 scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,26 +64,26 @@ export default function Contact() {
             {t('contact.description')}
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className='bg-white rounded-[6px] px-2 pt-4'>
             <h3 className="text-2xl font-semibold text-gray-900">
               {t('contact.form.title')}
             </h3>
             {/* Tally.so iframe */}
-              <iframe
-                ref={tallyIframeRef}
-                src="https://tally.so/embed/3qqqj9?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1&backgroundColor=%23F3F4F6&buttonFullWidth=1"
-                width="100%"
-                height="400"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                title="Contact Form"
-                className="rounded-lg"
-              ></iframe>
+            <iframe
+              ref={tallyIframeRef}
+              src="https://tally.so/embed/3qqqj9?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1&backgroundColor=%23F3F4F6&buttonFullWidth=1"
+              width="100%"
+              height="400"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              title="Contact Form"
+              className="rounded-lg"
+            ></iframe>
           </div>
-          
+
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
@@ -92,7 +92,7 @@ export default function Contact() {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('contact.description')}
               </p>
-              
+
               <div className="space-y-6">
                 {socials.map((social) => {
                   if (social.id === 'email') {
@@ -113,7 +113,7 @@ export default function Contact() {
                   }
                   return null;
                 })}
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
                     <FiPhone className="text-blue-600 dark:text-blue-400" size={20} />
@@ -122,10 +122,10 @@ export default function Contact() {
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">
                       {t('contact.phone')}
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400">+62 812-5757-8571</p>
+                    <p className="text-gray-600 dark:text-gray-400">+62 831-2435-6686</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full">
                     <FiMapPin className="text-blue-600 dark:text-blue-400" size={20} />
@@ -139,7 +139,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            
+
             <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 {t('contact.followMe')}
@@ -148,7 +148,7 @@ export default function Contact() {
                 {socials.map((social) => {
                   const Icon = social.icon;
                   return (
-                    <a 
+                    <a
                       key={social.id}
                       href={social.href}
                       target="_blank"
