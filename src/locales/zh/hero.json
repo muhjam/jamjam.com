@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "greeting": "你好，我是",
+    "name": "Muhamad Jamaludin",
+    "title": "人工智能工程师 | 全栈开发人员",
+    "description": "我使用现代技术构建令人惊叹的 Web 应用程序。",
+    "contactMe": "联系我",
+    "downloadCV": "下载简历"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Feel free to reach out to me for any questions or opportunities.",
+    "form": {
+      "title": "Send Me a Message",
+      "name": "Your Name",
+    "email": "Your Email",
+    "subject": "Subject",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "success": "Your message has been sent successfully!",
+    "error": "There was an error sending your message. Please try again."
+  },
+  "contactInfo": "Contact Information",
+  "location": "Location",
+  "email": "Email",
+  "phone": "Phone",
+  "followMe": "Follow Me",
+  "socialMedia": "Social Media",
+  "officeHours": "Office Hours",
+  "hours": "Bandung, Indonesia",
+  "quickLinks": "Quick Links",
+  "home": "Home",
+  "about": "About",
+  "works": "Works",
+  "contact": "Contact"
+  }
+}

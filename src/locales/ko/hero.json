@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "greeting": "안녕하세요, 저는",
+    "name": "Muhamad Jamaludin",
+    "title": "AI 엔지니어 | 풀스택 개발자",
+    "description": "현대적인 기술을 사용하여 놀라운 웹 애플리케이션을 구축합니다.",
+    "contactMe": "문의하기",
+    "downloadCV": "이력서 다운로드"
+  }
+}

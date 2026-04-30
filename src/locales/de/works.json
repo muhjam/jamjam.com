@@ -1,0 +1,41 @@
+{
+  "works": {
+    "title": "Meine Projekte",
+    "subtitle": "Eine Auswahl meiner aktuellen Arbeiten",
+    "viewProject": "Projekt ansehen",
+    "present": "Heute",
+    "filters": {
+      "all": "Alle",
+      "web": "Web",
+      "mobile": "Mobil",
+      "design": "Design"
+    },
+    "projects": {
+      "1": {
+        "title": "Anarise Japan",
+        "description": "Entwicklung einer Plattform für Codierungschallenges und Jobsuche mit React.js, Next.js, Vue.js und Node.js.",
+        "tags": ["React.js", "Next.js", "Vue.js", "Node.js", "Open AI"]
+      },
+      "2": {
+        "title": "Journal International",
+        "description": "Forscher an der Universitas Pasundan und der Changwon University. Veröffentlichung von Forschungsartikeln über KI in der Bildung.",
+        "tags": ["Next.js", "Javascript", "Tailwind CSS", "Open AI"]
+      },
+      "3": {
+        "title": "Conference International - KIICE 2025",
+        "description": "Präsentation auf der KIICE-Konferenz über KI in der Bildung. Mitautor eines Papers über die Erstellung von Mathematikprüfungen.",
+        "tags": ["Next.js", "Javascript", "Tailwind CSS", "Open AI"]
+      },
+      "4": {
+        "title": "AI Reservation Japan",
+        "description": "Entwicklung eines Dashboards und von Benutzerseiten für Restaurantreservierungen mit einem KI-gesteuerten Sprachassistenten.",
+        "tags": ["Next.js", "Typescript", "Tailwind CSS"]
+      },
+      "5": {
+        "title": "SHIGYOcloud Japan",
+        "description": "Entwicklung eines dokumentenbasierten KI-Chatbots mit Next.js, NestJS, RAGFlow und Typescript.",
+        "tags": ["Next.js", "Typescript", "Tailwind CSS", "NestJS", "RAGFlow"]
+      }
+    }
+  }
+}

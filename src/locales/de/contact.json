@@ -1,0 +1,15 @@
+{
+  "contact": {
+    "title": "Kontakt",
+    "description": "Zögern Sie nicht, mich zu kontaktieren!",
+    "contactInfo": "Kontaktinformationen",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "location": "Standort",
+    "hours": "Montag - Freitag, 9:00 - 17:00",
+    "followMe": "Folge mir",
+    "form": {
+      "title": "Senden Sie mir eine Nachricht"
+    }
+  }
+}

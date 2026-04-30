@@ -6,8 +6,8 @@ import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
 // Define supported locales
-type Locale = 'en' | 'id';
-const locales: Locale[] = ['en', 'id'];
+type Locale = 'en' | 'id' | 'jp' | 'de' | 'es' | 'fr' | 'zh' | 'ko';
+const locales: Locale[] = ['en', 'id', 'jp', 'de', 'es', 'fr', 'zh', 'ko'];
 
 
 // Dynamically import components with loading fallback

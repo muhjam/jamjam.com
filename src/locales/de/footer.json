@@ -1,0 +1,14 @@
+{
+  "footer": {
+    "builtWith": "Erstellt mit Leidenschaft im Jahr {year}",
+    "quickLinks": "Schnelllinks",
+    "home": "Startseite",
+    "about": "Über mich",
+    "works": "Projekte",
+    "contact": "Kontakt",
+    "connect": "Verbinden",
+    "copyright": "© {year} Jamjam Portfolio. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "terms": "AGB"
+  }
+}

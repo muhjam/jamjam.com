@@ -9,8 +9,8 @@ import '../globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 // Define supported locales
-type Locale = 'en' | 'id';
-const locales: Locale[] = ['en', 'id'];
+type Locale = 'en' | 'id' | 'jp' | 'de' | 'es' | 'fr' | 'zh' | 'ko';
+const locales: Locale[] = ['en', 'id', 'jp', 'de', 'es', 'fr', 'zh', 'ko'];
 
 export const metadata: Metadata = {
   title: 'Jamjam',

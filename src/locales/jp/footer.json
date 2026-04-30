@@ -1,0 +1,14 @@
+{
+  "footer": {
+    "builtWith": "{year}年に情熱を持って構築されました",
+    "quickLinks": "クイックリンク",
+    "home": "ホーム",
+    "about": "私について",
+    "works": "実績",
+    "contact": "お問い合わせ",
+    "connect": "つながる",
+    "copyright": "© {year} Jamjam Portfolio. 全著作権所有。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  }
+}

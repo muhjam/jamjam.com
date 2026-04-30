@@ -1,0 +1,14 @@
+{
+  "footer": {
+    "builtWith": "Built with Next.js and Tailwind CSS • © {year}",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact",
+    "connect": "Connect",
+    "copyright": "© {year} Jamjam. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

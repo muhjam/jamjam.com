@@ -1,0 +1,41 @@
+{
+  "works": {
+    "title": "私の実績",
+    "subtitle": "最近のプロジェクトのセレクション",
+    "viewProject": "プロジェクトを見る",
+    "present": "現在",
+    "filters": {
+      "all": "すべて",
+      "web": "ウェブ",
+      "mobile": "モバイル",
+      "design": "デザイン"
+    },
+    "projects": {
+      "1": {
+        "title": "Anarise Japan",
+        "description": "React.js、Next.js、Vue.js、Node.jsを使用して、コーディングチャレンジと求人検索プラットフォームを構築しました。",
+        "tags": ["React.js", "Next.js", "Vue.js", "Node.js", "Open AI"]
+      },
+      "2": {
+        "title": "Journal International",
+        "description": "パスンダン大学とチャンウォン大学の研究員。教育におけるAIに関する研究論文を出版しました。",
+        "tags": ["Next.js", "Javascript", "Tailwind CSS", "Open AI"]
+      },
+      "3": {
+        "title": "Conference International - KIICE 2025",
+        "description": "教育におけるAIに関するKIICEカンファレンスで発表しました。",
+        "tags": ["Next.js", "Javascript", "Tailwind CSS", "Open AI"]
+      },
+      "4": {
+        "title": "AI Reservation Japan",
+        "description": "レストランの電話予約のためのダッシュボードとユーザーページを構築しました。",
+        "tags": ["Next.js", "Typescript", "Tailwind CSS"]
+      },
+      "5": {
+        "title": "SHIGYOcloud Japan",
+        "description": "Next.js、NestJS、RAGFlow、Typescriptを使用して、ドキュメント対応のAIチャットボットを開発しました。",
+        "tags": ["Next.js", "Typescript", "Tailwind CSS", "NestJS", "RAGFlow"]
+      }
+    }
+  }
+}

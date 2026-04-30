@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Muhamad Jamaludin",
+    "title": "Ingeniero de IA | Desarrollador Full Stack",
+    "description": "Construyo aplicaciones web increíbles con tecnologías modernas.",
+    "contactMe": "Contáctame",
+    "downloadCV": "Descargar CV"
+  }
+}

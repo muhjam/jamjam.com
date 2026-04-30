@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "name": "Muhamad Jamaludin",
+    "title": "KI-Ingenieur | Full-Stack-Entwickler",
+    "description": "Ich erstelle erstaunliche Webanwendungen mit modernen Technologien.",
+    "contactMe": "Kontaktiere mich",
+    "downloadCV": "Lebenslauf herunterladen"
+  }
+}

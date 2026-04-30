@@ -1,0 +1,15 @@
+{
+  "contact": {
+    "title": "お問い合わせ",
+    "description": "お気軽にご連絡ください！",
+    "contactInfo": "連絡先情報",
+    "email": "メール",
+    "phone": "電話",
+    "location": "住所",
+    "hours": "月曜日 - 金曜日、9:00 - 17:00",
+    "followMe": "フォローする",
+    "form": {
+      "title": "メッセージを送る"
+    }
+  }
+}

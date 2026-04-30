@@ -1,0 +1,18 @@
+{
+  "about": {
+    "title": "Über mich",
+    "subtitle": "KI-Ingenieur & Full-Stack-Entwickler",
+    "description1": "Ich bin ein leidenschaftlicher KI-Ingenieur und Full-Stack-Entwickler mit Erfahrung in der Entwicklung innovativer digitaler Lösungen.",
+    "description2": "Mein Fokus liegt auf der Kombination von künstlicher Intelligenz mit modernen Webtechnologien, um effiziente und benutzerfreundliche Anwendungen zu schaffen.",
+    "skillsTitle": "Fähigkeiten",
+    "experienceTitle": "Erfahrung",
+    "experience": [
+      {
+        "title": "KI-Ingenieur",
+        "company": "Anarise Japan",
+        "period": "2023 - Heute",
+        "description": "Entwicklung von KI-gestützten Plattformen für Codierungschallenges."
+      }
+    ]
+  }
+}
