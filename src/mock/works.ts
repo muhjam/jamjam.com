@@ -84,10 +84,11 @@ export const works: WorkItem[] = [
       en: 'Built a dashboard and user pages for restaurant call reservations. Integrated an AI-powered voice assistant to handle customer calls. Developed using Next.js, Typescript, and Tailwind CSS.',
       id: 'Membangun dasbor dan halaman pengguna untuk reservasi panggilan restoran. Mengintegrasikan asisten suara bertenaga AI untuk menangani panggilan pelanggan. Dikembangkan menggunakan Next.js, Typescript, dan Tailwind CSS.'
     },
-    image: '/images/project1.jpg',
+    image: '/images/booking-ai.png',
     tools: ['Next.js', 'Typescript', 'Tailwind CSS'],
     startDate: '2025-04',
-    endDate: '2025-06'
+    endDate: '2025-06',
+    link: 'https://app.booking-ai.jp'
   },
   {
     id: '9',
