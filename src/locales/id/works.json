@@ -11,6 +11,11 @@
     "design": "Desain"
   },
   "projects": {
+    "15": {
+      "title": "Vibe Language",
+      "description": "Vibe Language adalah platform pengujian kemahiran multibahasa bertenaga AI yang dikembangkan untuk tantangan \"Juara Vibe Coding\" dari Google. Aplikasi ini menghasilkan ujian yang dipersonalisasi dalam hitungan detik, memungkinkan pengguna untuk melatih keterampilan Membaca, Menulis, Berbicara, dan Mendengarkan dalam 14+ bahasa. Fitur utamanya mencakup pertanyaan yang selalu unik dan dukungan kunci API khusus untuk penggunaan token pribadi.",
+      "tags": ["Next.js", "Typescript", "Tailwind CSS", "Open AI", "GROQ", "Google Cloud"]
+    },
     "1": {
       "title": "Anarise Japan",
       "description": "Membangun platform tantangan coding dan pencarian kerja dengan React.js, Next.js, Vue.js, dan Node.js. Melatih model AI untuk menghasilkan masalah coding secara otomatis dan menilai solusi. Mempercepat evaluasi kandidat dengan eksekusi kode waktu nyata dan sistem peringkat.",

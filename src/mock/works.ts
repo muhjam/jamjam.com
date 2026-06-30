@@ -14,6 +14,19 @@ export interface WorkItem {
 
 export const works: WorkItem[] = [
   {
+    id: '15',
+    title: 'Vibe Language',
+    description: {
+      en: 'Vibe Language is an AI-powered multilingual proficiency testing platform developed for the "Juara Vibe Coding" challenge by Google. It generates personalized exams in seconds, allowing users to practice Reading, Writing, Speaking, and Listening in 14+ languages. The app features always-unique questions and supports custom API keys for personal token usage.',
+      id: 'Vibe Language adalah platform pengujian kemahiran multibahasa bertenaga AI yang dikembangkan untuk tantangan "Juara Vibe Coding" dari Google. Aplikasi ini menghasilkan ujian yang dipersonalisasi dalam hitungan detik, memungkinkan pengguna untuk melatih keterampilan Membaca, Menulis, Berbicara, dan Mendengarkan dalam 14+ bahasa. Fitur utamanya mencakup pertanyaan yang selalu unik dan dukungan kunci API khusus untuk penggunaan token pribadi.'
+    },
+    image: '/images/vibe-language.png',
+    tools: ['Next.js', 'Typescript', 'Tailwind CSS', 'Open AI', 'GROQ', 'Google Cloud'],
+    startDate: '2026-06',
+    endDate: 'Present',
+    link: 'https://juara-vibe-coding-434609644777.asia-southeast2.run.app/'
+  },
+  {
     id: '14',
     title: 'Graduation Project',
     description: {
